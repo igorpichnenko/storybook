@@ -1,5 +1,5 @@
 import { Parameters } from '@storybook/react';
-import '../src/styles.scss';
+import '../src/styles/styles.scss';
 
 export const parameters: Parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
