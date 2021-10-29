@@ -13,12 +13,18 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({}) as Story<ButtonProps>;
 Default.args = {
-  children: "Primary",
+  children: "L · Button",
   variant: "primary",
 };
 
 export const Secondary = Template.bind({}) as Story<ButtonProps>;
 Secondary.args = {
-  children: "Secondary",
+  children: "L · Button",
   variant: "secondary",
+};
+
+export const dim = Template.bind({}) as Story<ButtonProps>;
+dim.args = {
+  children: "Не помню пароль",
+  variant: "dim",
 };
