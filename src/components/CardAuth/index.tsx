@@ -14,11 +14,11 @@ export const CardAuth: React.FC<CardAuthProps> = ({
   error,
   ...rest
 }) => (
-  <section
+  <form
     className={`${styles.cardAuth} ${`${styles[variant]}`} ${className}`}
     {...rest}
   >
-    <CardNav variant="primary" />
+    <CardNav />
     <div className={styles.cardFooter}>
       <div className={styles.inputs}>
         {error ? (
@@ -58,5 +58,5 @@ export const CardAuth: React.FC<CardAuthProps> = ({
         </div>
       </div>
     </div>
-  </section>
+  </form>
 );

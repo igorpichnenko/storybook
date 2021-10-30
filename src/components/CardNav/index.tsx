@@ -7,7 +7,6 @@ import { LinkComponent } from "../Link";
 import { MemoryRouter } from "react-router-dom";
 
 export const CardNav: React.FC<CardNavProps> = ({
-  variant,
   children,
   className,
   isLink,
@@ -16,9 +15,7 @@ export const CardNav: React.FC<CardNavProps> = ({
   const noLinkHeader = isLink ? " " : styles.simple;
   return (
     <section
-      className={`${
-        styles.cardNav
-      } ${`${styles[variant]}`} ${className} ${noLinkHeader}`}
+      className={`${styles.cardNav}  ${className} ${noLinkHeader}`}
       {...rest}
     >
       <MemoryRouter>

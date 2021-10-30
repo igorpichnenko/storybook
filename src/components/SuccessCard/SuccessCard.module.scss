@@ -1,0 +1,43 @@
+@import "../../styles/styles.scss";
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.32px;
+
+  color: #191919;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 390px;
+  }
+  @media (max-width: $table-width) {
+    margin-bottom: 327px;
+  }
+  @media (max-width: 321px) {
+    margin-bottom: 55px;
+  }
+}
+.icon {
+  @media (max-width: $desktop-width) {
+    margin-top: 234px;
+  }
+  @media (max-width: $table-width) {
+    margin-top: 172px;
+  }
+  @media (max-width: 321px) {
+    margin-top: 55px;
+  }
+}

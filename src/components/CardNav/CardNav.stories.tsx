@@ -13,11 +13,9 @@ const Template: Story<CardNavProps> = (args) => <CardNav {...args} />;
 
 export const Default = Template.bind({}) as Story<CardNavProps>;
 Default.args = {
-  variant: "primary",
   isLink: true,
 };
 export const noLink = Template.bind({}) as Story<CardNavProps>;
 noLink.args = {
-  variant: "primary",
   isLink: false,
 };

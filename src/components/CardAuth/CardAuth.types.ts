@@ -4,4 +4,4 @@ export type CardAuthProps = {
   variant?: 'primary' | 'secondary';
   children?: React.ReactNode;
   error?: string
-} & React.HTMLProps<HTMLDivElement>;
+} & React.HTMLProps<HTMLFormElement>;
