@@ -18,7 +18,7 @@ export const Input: React.FC<InputProps> = ({
     />
     <img
       className={styles.inputIcon}
-      src={require(`../../public/${image}.svg`)}
+      src={require(`../../../public/${image}.svg`)}
     />
   </div>
 );
