@@ -5,11 +5,13 @@ import styles from "./CardAuth.module.scss";
 import { CardNav } from "../CardNav";
 import { Input } from "../Input";
 import { Button } from "../Button";
+import { Alert } from "../Alert";
 
 export const CardAuth: React.FC<CardAuthProps> = ({
   variant,
   children,
   className,
+  error,
   ...rest
 }) => (
   <section
@@ -19,6 +21,11 @@ export const CardAuth: React.FC<CardAuthProps> = ({
     <CardNav variant="primary" />
     <div className={styles.cardFooter}>
       <div className={styles.inputs}>
+        {error ? (
+          <div className={styles.error}>
+            <Alert children="Ой-ёй" image="alert" />{" "}
+          </div>
+        ) : null}
         <Input
           type="email"
           variant="primary"

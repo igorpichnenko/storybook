@@ -16,3 +16,10 @@ Default.args = {
   children: "L · Button",
   variant: "primary",
 };
+
+export const Error = Template.bind({}) as Story<CardAuthProps>;
+Error.args = {
+  children: "L · Button",
+  variant: "primary",
+  error: "true",
+};

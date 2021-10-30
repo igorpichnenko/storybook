@@ -6,4 +6,5 @@ export type InputProps = {
   type: 'text' | 'email' | 'password';
   withIcon?: boolean
   image?: 'key' | 'email'
+  error?: string
 } & React.HTMLProps<HTMLInputElement>;

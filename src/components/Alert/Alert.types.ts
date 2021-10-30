@@ -1,7 +1,8 @@
 import React from 'react';
 
-export type CardAuthProps = {
-  variant: 'primary' | 'secondary';
+export type AlertProps = {
+
   children?: React.ReactNode;
-  error: string
+
+  image: string
 } & React.HTMLProps<HTMLDivElement>;

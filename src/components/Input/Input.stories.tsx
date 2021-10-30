@@ -27,3 +27,13 @@ Password.args = {
   variant: "secondary",
   placeholder: "Пароль",
 };
+
+export const PasswordError = Template.bind({}) as Story<InputProps>;
+PasswordError.args = {
+  type: "password",
+  withIcon: true,
+  image: "key",
+  variant: "secondary",
+  placeholder: "Пароль",
+  error: "true",
+};
