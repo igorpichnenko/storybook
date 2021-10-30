@@ -11,10 +11,7 @@ export const Alert: React.FC<AlertProps> = ({
 }) => (
   <div className={`${styles.alert}  ${className}`} {...rest}>
     <div className={styles.items}>
-      <img
-        className={styles.icon}
-        src={require(`../../../public/${image}.svg`)}
-      />
+      <img className={styles.icon} src={`/${image}.svg`} alt="my image" />
       {children}
     </div>
   </div>

@@ -16,10 +16,7 @@ export const SuccessCard: React.FC<SuccessCardProps> = ({
       <CardNav isLink={false} />
     </div>
     <div className={styles.items}>
-      <img
-        className={styles.icon}
-        src={require(`../../../public/${image}.svg`)}
-      />
+      <img className={styles.icon} src={`/${image}.svg`} alt="my image" />
       <h1 className={styles.title}>
         Поздравляем, Username!
         <br /> Вы успешно авторизированны
