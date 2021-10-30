@@ -3,6 +3,7 @@ import { Story, Meta } from "@storybook/react";
 
 import { Card } from "./index";
 import { CardProps } from "./Card.types";
+import { CardAuth } from "../CardAuth";
 
 export default {
   title: "Card",
@@ -11,8 +12,8 @@ export default {
 
 const Template: Story<CardProps> = (args) => <Card {...args} />;
 
-export const Default = Template.bind({}) as Story<CardProps>;
-Default.args = {
-  children: "L · Button",
+export const Auth = Template.bind({}) as Story<CardProps>;
+Auth.args = {
+  children: <CardAuth variant="primary" />,
   variant: "primary",
 };

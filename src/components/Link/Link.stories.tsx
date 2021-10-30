@@ -3,7 +3,6 @@ import { LinkComponent } from "./index";
 import { MemoryRouter } from "react-router-dom";
 import { Story, Meta } from "@storybook/react";
 import { LinkProps } from "./Link.types";
-import { Button } from "../Button";
 
 export default {
   title: "LinkProps",
