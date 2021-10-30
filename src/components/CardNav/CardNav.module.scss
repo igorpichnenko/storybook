@@ -17,6 +17,9 @@
   @media (min-width: 321px) {
     height: 195px;
   }
+  &.simple {
+    justify-content: center;
+  }
 }
 
 .links {

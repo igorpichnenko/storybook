@@ -6,31 +6,38 @@ import { Logo } from "../Logo";
 import { LinkComponent } from "../Link";
 import { MemoryRouter } from "react-router-dom";
 
-// * Storybook can not catch default export types
 export const CardNav: React.FC<CardNavProps> = ({
   variant,
   children,
   className,
+  isLink,
   ...rest
-}) => (
-  <section
-    className={`${styles.cardNav} ${`${styles[variant]}`} ${className}`}
-    {...rest}
-  >
-    <MemoryRouter>
-      <div className={styles.logotype}>
-        <Logo image="logo" />
-      </div>
-      <div className={styles.links}>
-        <LinkComponent to="/auth" children="Вход" isActive />
-        <div className={styles.reg}>
-          <LinkComponent
-            to="/registration"
-            children="Регистрация"
-            isActive={false}
-          />
+}) => {
+  const noLinkHeader = isLink ? " " : styles.simple;
+  return (
+    <section
+      className={`${
+        styles.cardNav
+      } ${`${styles[variant]}`} ${className} ${noLinkHeader}`}
+      {...rest}
+    >
+      <MemoryRouter>
+        <div className={styles.logotype}>
+          <Logo image="logo" />
         </div>
-      </div>
-    </MemoryRouter>
-  </section>
-);
+        {isLink ? (
+          <div className={styles.links}>
+            <LinkComponent to="/auth" children="Вход" isActive />
+            <div className={styles.reg}>
+              <LinkComponent
+                to="/registration"
+                children="Регистрация"
+                isActive={false}
+              />
+            </div>
+          </div>
+        ) : null}
+      </MemoryRouter>
+    </section>
+  );
+};
