@@ -8,4 +8,6 @@ export type InputProps = {
   image?: 'key' | 'email'
   error?: string,
   text?: string
+  id?: string,
+  htmlFor?: string
 } & React.HTMLProps<HTMLInputElement>;

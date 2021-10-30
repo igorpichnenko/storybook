@@ -1,3 +1,5 @@
+@import "../../styles/styles.scss";
+
 .inputWrap {
   position: relative;
 }
@@ -29,6 +31,16 @@
 
   border-radius: 6px 6px 6px 6px;
 
+  @media (min-width: $phone-width) {
+    background: rgba(0, 0, 0, 0.1);
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    padding-left: 5px;
+  }
+
   &::placeholder {
     font-family: Helvetica Neue;
     font-style: normal;
@@ -37,16 +49,35 @@
     line-height: 20px;
 
     color: #aaaaaa;
+    @media (min-width: $phone-width) {
+      color: white;
+    }
   }
   &:focus {
     border: 1px solid #198cff;
+    @media (min-width: $phone-width) {
+      background: rgba(0, 0, 0, 0.1);
+
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      background-color: white;
+      padding-left: 5px;
+    }
   }
   &.primary {
     border-radius: 6px 6px 0px 0px;
   }
   &.secondary {
     border-radius: 0px 0px 6px 6px;
+    @media (min-width: $phone-width) {
+      border-radius: 0px;
+    }
   }
+}
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+  top: -10px;
 }
 
 .inputIcon {
@@ -55,9 +86,14 @@
   position: absolute;
   top: 12px;
   left: 12px;
+  @media (min-width: $phone-width) {
+    display: none;
+  }
 }
 
 .error {
+  margin-top: 7px;
+
   font-family: SF Pro Text;
   font-style: normal;
   font-weight: normal;
@@ -67,4 +103,36 @@
   letter-spacing: -0.078px;
 
   color: #f15b3e;
+
+  @media (max-width: $phone-width) {
+    display: none;
+  }
+}
+.label {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #aaaaaa;
+
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  transition: top 0.5s;
+
+  @media (max-width: $phone-width) {
+    display: none;
+  }
+}
+.form {
+  position: relative;
+}
+
+.inputRed {
+  border-color: #f15b3e;
+  @media (max-width: $phone-width) {
+    border-color: rgba(0, 0, 0, 0.1);
+  }
 }
