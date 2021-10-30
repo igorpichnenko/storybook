@@ -11,19 +11,19 @@ export const Input: React.FC<InputProps> = ({
   withIcon,
   image,
   error,
+  text,
   ...rest
 }) => (
   <div className={styles.inputWrap}>
-    {error ? (
-      <div className={styles.error}>
-        <Alert children="Ой-ёй" image="alert" />{" "}
-      </div>
-    ) : null}
     <div className={styles.items}>
-      <input
-        className={`${styles.input} ${`${styles[variant]}`} ${className}`}
-        {...rest}
-      />
+      <label>
+        {text}
+        <input
+          className={`${styles.input} ${`${styles[variant]}`} ${className}`}
+          {...rest}
+        />
+        {error ? <span className={styles.error}>{error}</span> : null}
+      </label>
       <img
         className={styles.inputIcon}
         src={require(`../../../public/${image}.svg`)}

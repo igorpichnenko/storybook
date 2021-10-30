@@ -18,6 +18,7 @@ Email.args = {
   image: "email",
   variant: "primary",
   placeholder: "Логин или почта",
+  text: "Логин или почта",
 };
 export const Password = Template.bind({}) as Story<InputProps>;
 Password.args = {
@@ -26,6 +27,7 @@ Password.args = {
   image: "key",
   variant: "secondary",
   placeholder: "Пароль",
+  text: "Пароль",
 };
 
 export const PasswordError = Template.bind({}) as Story<InputProps>;
@@ -35,5 +37,5 @@ PasswordError.args = {
   image: "key",
   variant: "secondary",
   placeholder: "Пароль",
-  error: "true",
+  error: "Ой-ёй",
 };
