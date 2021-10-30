@@ -1,3 +1,5 @@
+@import "../../styles/styles.scss";
+
 .button {
   padding: 10px 20px;
   border: unset;
@@ -5,7 +7,7 @@
   width: 100%;
   height: 40px;
 
-  background: #2b96f1;
+  background: $primary;
   border-radius: 20px;
 
   //font-family: Helvetica Neue;
@@ -32,7 +34,7 @@
     width: 100%;
     height: 40px;
 
-    background: rgba(0, 0, 0, 0.07);
+    background: $secondary;
     border-radius: 20px;
 
     //font-family: Helvetica Neue;
