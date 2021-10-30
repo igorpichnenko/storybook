@@ -31,22 +31,31 @@ export const CardAuth: React.FC<CardAuthProps> = ({
           variant="primary"
           placeholder="Логин или Почта"
           image="email"
+          text="Логин или почта"
+          id="email"
+          htmlFor="email"
         />
-
-        <Input
-          type="password"
-          variant="secondary"
-          placeholder="Пароль"
-          image="key"
-        />
+        <div className={styles.passInput}>
+          <Input
+            type="password"
+            variant="secondary"
+            placeholder="Пароль"
+            image="key"
+            text="Пароль"
+            id="password"
+            htmlFor="password"
+          />
+        </div>
       </div>
       <div className={styles.buttons}>
         <Button type="button" variant="primary">
           Войти
         </Button>
-        <Button type="button" variant="dim">
-          Не помню пароль
-        </Button>
+        <div className={styles.pass}>
+          <Button type="button" variant="dim">
+            Не помню пароль
+          </Button>
+        </div>
       </div>
     </div>
   </section>

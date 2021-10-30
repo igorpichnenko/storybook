@@ -8,6 +8,7 @@ export const LinkComponent = ({ to, children, isActive }) => {
       className={`${styles.link} ${`${styles[isActive ? "isActive" : ""]}`}`}
       to={to}
     >
+      {isActive ? <span className={styles.activeLine}></span> : null}
       {children}
     </Link>
   );

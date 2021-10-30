@@ -1,10 +1,10 @@
 import React from "react";
 
-import { CardProps } from "./Card.types";
-import styles from "./Card.module.scss";
+import { CardsProps } from "./Cards.types";
+import styles from "./Cards.module.scss";
 
 // * Storybook can not catch default export types
-export const Card: React.FC<CardProps> = ({
+export const Cards: React.FC<CardsProps> = ({
   variant,
   children,
   className,

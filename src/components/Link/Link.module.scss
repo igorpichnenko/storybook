@@ -1,4 +1,6 @@
 .link {
+  position: relative;
+
   font-family: Helvetica Neue;
   font-style: normal;
   font-weight: 500;
@@ -12,4 +14,15 @@
   &.isActive {
     color: #191919;
   }
+}
+
+.activeLine {
+  position: absolute;
+
+  top: 29px;
+  width: 36px;
+  height: 3px;
+
+  background: #198cff;
+  border-radius: 10px;
 }

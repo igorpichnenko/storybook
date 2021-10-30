@@ -31,7 +31,7 @@
 
   border-radius: 6px 6px 6px 6px;
 
-  @media (min-width: $phone-width) {
+  @media (min-width: 321px) {
     background: rgba(0, 0, 0, 0.1);
 
     border-top: none;
@@ -49,13 +49,13 @@
     line-height: 20px;
 
     color: #aaaaaa;
-    @media (min-width: $phone-width) {
+    @media (min-width: 321px) {
       color: white;
     }
   }
   &:focus {
     border: 1px solid #198cff;
-    @media (min-width: $phone-width) {
+    @media (min-width: 321px) {
       background: rgba(0, 0, 0, 0.1);
 
       border-top: none;
@@ -70,7 +70,7 @@
   }
   &.secondary {
     border-radius: 0px 0px 6px 6px;
-    @media (min-width: $phone-width) {
+    @media (min-width: 321px) {
       border-radius: 0px;
     }
   }
@@ -86,7 +86,7 @@
   position: absolute;
   top: 12px;
   left: 12px;
-  @media (min-width: $phone-width) {
+  @media (min-width: 321px) {
     display: none;
   }
 }
@@ -104,7 +104,7 @@
 
   color: #f15b3e;
 
-  @media (max-width: $phone-width) {
+  @media (max-width: 321px) {
     display: none;
   }
 }
@@ -122,7 +122,7 @@
   top: 10px;
   transition: top 0.5s;
 
-  @media (max-width: $phone-width) {
+  @media (max-width: 321px) {
     display: none;
   }
 }
@@ -132,7 +132,7 @@
 
 .inputRed {
   border-color: #f15b3e;
-  @media (max-width: $phone-width) {
+  @media (max-width: 321px) {
     border-color: rgba(0, 0, 0, 0.1);
   }
 }

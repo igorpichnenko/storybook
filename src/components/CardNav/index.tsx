@@ -30,7 +30,6 @@ export const CardNav: React.FC<CardNavProps> = ({
             isActive={false}
           />
         </div>
-        <span className={styles.activeLine}></span>
       </div>
     </MemoryRouter>
   </section>

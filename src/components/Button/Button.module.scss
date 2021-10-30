@@ -73,6 +73,16 @@
     letter-spacing: 0.005em;
 
     color: #2b96f1;
+
+    @media (min-width: 321px) {
+      color: #4ca6fe;
+
+      font-family: SF Pro Text;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
   &:hover {
     background: rgba(43, 150, 241, 0.1);

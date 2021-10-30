@@ -1,7 +1,7 @@
 import React from 'react';
 
 export type CardAuthProps = {
-  variant: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary';
   children?: React.ReactNode;
-  error: string
+  error?: string
 } & React.HTMLProps<HTMLDivElement>;

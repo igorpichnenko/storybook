@@ -1,5 +1,6 @@
+@import "../../styles/styles.scss";
+
 .cardNav {
-  width: 300px;
   height: 165px;
 
   display: flex;
@@ -12,32 +13,20 @@
   background: #ffffff;
 
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
-}
 
-.logotype {
+  @media (min-width: 321px) {
+    height: 195px;
+  }
 }
 
 .links {
   display: flex;
+  justify-content: center;
   position: relative;
   margin-bottom: 10.5px;
   width: 100%;
-  padding-left: 70px;
 }
 
 .reg {
   margin-left: 55px;
-}
-
-.activeLine {
-  position: absolute;
-
-  bottom: -10.5px;
-  left: 69px;
-
-  width: 36px;
-  height: 3px;
-
-  background: #198cff;
-  border-radius: 10px;
 }

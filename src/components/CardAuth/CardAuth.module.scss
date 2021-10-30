@@ -1,21 +1,61 @@
-.cardAuth {
-  width: 300px;
-}
+@import "../../styles/styles.scss";
 
 .cardFooter {
-  margin-top: 25px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $desktop-width) {
+    margin-top: 180px;
+  }
+  @media (max-width: $table-width) {
+    margin-top: 115px;
+  }
+  @media (max-width: 321px) {
+    margin-top: 25px;
+  }
 }
 
-.inputs {
-  margin-bottom: 26px;
-}
 .buttons {
   display: flex;
   flex-direction: column;
   gap: 15px;
+
+  position: relative;
+
+  @media (max-width: $desktop-width) {
+    margin-top: 326px;
+  }
+  @media (max-width: $table-width) {
+    margin-top: 264px;
+  }
+  @media (max-width: 321px) {
+    margin-top: 26px;
+  }
 }
 .error {
   margin-bottom: 15px;
+  @media (min-width: 321px) {
+    display: none;
+  }
+}
+
+.passInput {
+  @media (min-width: 321px) {
+    margin-top: 60px;
+  }
+}
+.pass {
+  @media (max-width: $desktop-width) {
+    position: absolute;
+    right: 0;
+    top: -400px;
+  }
+  @media (max-width: $table-width) {
+    position: absolute;
+    right: 0;
+    top: -324px;
+  }
+  @media (max-width: 321px) {
+    position: static;
+  }
 }
