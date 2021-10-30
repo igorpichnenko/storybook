@@ -16,11 +16,9 @@ export const Input: React.FC<InputProps> = ({
       className={`${styles.input} ${`${styles[variant]}`} ${className}`}
       {...rest}
     />
-    {withIcon ? (
-      <div
-        style={{ backgroundImage: `url(static/media/src/assets/${image}.svg)` }}
-        className={styles.inputIcon}
-      ></div>
-    ) : null}
+    <img
+      className={styles.inputIcon}
+      src={require(`../../public/${image}.svg`)}
+    />
   </div>
 );

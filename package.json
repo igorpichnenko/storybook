@@ -41,8 +41,8 @@
     "react-dom": ">=17.0.1"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -s ./public 6006",
+    "build-storybook": "build-storybook -s public",
     "deploy-storybook": "gh-pages -d storybook-static",
     "deploy": "npm run build-storybook && gh-pages -d storybook-static"
   }

@@ -11,11 +11,19 @@ export default {
 
 const Template: Story<InputProps> = (args) => <Input {...args} />;
 
-export const Default = Template.bind({}) as Story<InputProps>;
-Default.args = {
-  type: "text",
+export const Email = Template.bind({}) as Story<InputProps>;
+Email.args = {
+  type: "email",
   withIcon: true,
-  image: "key",
+  image: "email",
   variant: "primary",
   placeholder: "Логин или почта",
+};
+export const Password = Template.bind({}) as Story<InputProps>;
+Password.args = {
+  type: "password",
+  withIcon: true,
+  image: "key",
+  variant: "secondary",
+  placeholder: "Пароль",
 };
