@@ -9,6 +9,7 @@ export const SuccessCard: React.FC<SuccessCardProps> = ({
   children,
   className,
   image,
+  handleClickOut,
   ...rest
 }) => (
   <section className={`${styles.successCard}  ${className}`} {...rest}>
@@ -22,7 +23,7 @@ export const SuccessCard: React.FC<SuccessCardProps> = ({
         <br /> Вы успешно авторизированны
       </h1>
 
-      <Button type="button" variant="secondary">
+      <Button onClick={handleClickOut} type="button" variant="secondary">
         Выйти
       </Button>
     </div>

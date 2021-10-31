@@ -7,8 +7,8 @@
     "@babel/core": "^7.13.8",
     "@storybook/addon-actions": "^6.1.21",
     "@storybook/addon-essentials": "^6.1.21",
-    "@storybook/preset-create-react-app": "^1.5.2",
     "@storybook/addon-links": "^6.1.21",
+    "@storybook/preset-create-react-app": "^1.5.2",
     "@storybook/react": "^6.1.21",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
@@ -51,8 +51,10 @@
     "deploy": "npm run build-storybook && gh-pages -d storybook-static"
   },
   "dependencies": {
+    "@storybook/router": "^6.3.12",
     "@types/react-router": "^5.1.17",
     "@types/react-router-dom": "^5.3.2",
+    "@types/storybook-react-router": "^1.0.1",
     "storybook-router": "^0.3.4"
   }
 }

@@ -10,12 +10,12 @@ import { Alert } from "../Alert";
 export const CardAuth: React.FC<CardAuthProps> = ({
   className,
   error,
-  handleClick,
+  handleClickAuth,
   ...rest
 }) => {
   return (
     <form className={`${styles.cardAuth}  ${className}`} {...rest}>
-      <CardNav />
+      <CardNav isLink />
       <div className={styles.cardFooter}>
         <div className={styles.inputs}>
           {error ? (
@@ -45,7 +45,7 @@ export const CardAuth: React.FC<CardAuthProps> = ({
           </div>
         </div>
         <div className={styles.buttons}>
-          <Button onClick={handleClick} type="button" variant="primary">
+          <Button onClick={handleClickAuth} type="button" variant="primary">
             Войти
           </Button>
 

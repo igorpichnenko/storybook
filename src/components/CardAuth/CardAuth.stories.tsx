@@ -1,17 +1,25 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react";
-import { actions } from "@storybook/addon-actions";
+import { linkTo } from "@storybook/addon-links";
 
 import { CardAuth } from "./index";
 import { CardAuthProps } from "./CardAuth.types";
+import { MemoryRouter } from "react-router";
 
 export default {
   title: "CardAuth",
   component: CardAuth,
+  decorators: [
+    (Story) => (
+      <MemoryRouter>
+        <Story />
+      </MemoryRouter>
+    ),
+  ],
 } as Meta;
-const eventsFromNames = actions("handleClick");
+
 const Template: Story<CardAuthProps> = (args) => (
-  <CardAuth {...eventsFromNames} {...args} />
+  <CardAuth handleClickAuth={linkTo("SuccessCard")} {...args} />
 );
 
 export const Default = Template.bind({}) as Story<CardAuthProps>;
