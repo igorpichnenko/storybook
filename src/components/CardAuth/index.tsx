@@ -8,55 +8,54 @@ import { Button } from "../Button";
 import { Alert } from "../Alert";
 
 export const CardAuth: React.FC<CardAuthProps> = ({
-  variant,
-  children,
   className,
   error,
+  handleClick,
   ...rest
-}) => (
-  <form
-    className={`${styles.cardAuth} ${`${styles[variant]}`} ${className}`}
-    {...rest}
-  >
-    <CardNav />
-    <div className={styles.cardFooter}>
-      <div className={styles.inputs}>
-        {error ? (
-          <div className={styles.error}>
-            <Alert children="Ой-ёй" image="alert" />{" "}
-          </div>
-        ) : null}
-        <Input
-          type="email"
-          variant="primary"
-          placeholder="Логин или Почта"
-          image="email"
-          text="Логин или почта"
-          id="email"
-          htmlFor="email"
-        />
-        <div className={styles.passInput}>
+}) => {
+  return (
+    <form className={`${styles.cardAuth}  ${className}`} {...rest}>
+      <CardNav />
+      <div className={styles.cardFooter}>
+        <div className={styles.inputs}>
+          {error ? (
+            <div className={styles.error}>
+              <Alert children="Ой-ёй" image="alert" />{" "}
+            </div>
+          ) : null}
           <Input
-            type="password"
-            variant="secondary"
-            placeholder="Пароль"
-            image="key"
-            text="Пароль"
-            id="password"
-            htmlFor="password"
+            type="email"
+            variant="primary"
+            placeholder="Логин или Почта"
+            image="email"
+            text="Логин или почта"
+            id="email"
+            htmlFor="email"
           />
+          <div className={styles.passInput}>
+            <Input
+              type="password"
+              variant="secondary"
+              placeholder="Пароль"
+              image="key"
+              text="Пароль"
+              id="password"
+              htmlFor="password"
+            />
+          </div>
         </div>
-      </div>
-      <div className={styles.buttons}>
-        <Button type="button" variant="primary">
-          Войти
-        </Button>
-        <div className={styles.pass}>
-          <Button type="button" variant="dim">
-            Не помню пароль
+        <div className={styles.buttons}>
+          <Button onClick={handleClick} type="button" variant="primary">
+            Войти
           </Button>
+
+          <div className={styles.pass}>
+            <Button type="button" variant="dim">
+              Не помню пароль
+            </Button>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
-);
+    </form>
+  );
+};

@@ -4,7 +4,6 @@ import { CardNavProps } from "./CardNav.types";
 import styles from "./CardNav.module.scss";
 import { Logo } from "../Logo";
 import { LinkComponent } from "../Link";
-import { MemoryRouter } from "react-router-dom";
 
 export const CardNav: React.FC<CardNavProps> = ({
   children,
@@ -18,23 +17,21 @@ export const CardNav: React.FC<CardNavProps> = ({
       className={`${styles.cardNav}  ${className} ${noLinkHeader}`}
       {...rest}
     >
-      <MemoryRouter>
-        <div className={styles.logotype}>
-          <Logo image="logo" />
-        </div>
-        {isLink ? (
-          <div className={styles.links}>
-            <LinkComponent to="/auth" children="Вход" isActive />
-            <div className={styles.reg}>
-              <LinkComponent
-                to="/registration"
-                children="Регистрация"
-                isActive={false}
-              />
-            </div>
+      <div className={styles.logotype}>
+        <Logo image="logo" />
+      </div>
+      {isLink ? (
+        <div className={styles.links}>
+          <LinkComponent to="/auth" children="Вход" isActive />
+          <div className={styles.reg}>
+            <LinkComponent
+              to="/registration"
+              children="Регистрация"
+              isActive={false}
+            />
           </div>
-        ) : null}
-      </MemoryRouter>
+        </div>
+      ) : null}
     </section>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react";
+import { actions } from "@storybook/addon-actions";
 
 import { Cards } from "./index";
 import { CardsProps } from "./Cards.types";
@@ -10,10 +11,14 @@ export default {
   component: Cards,
 } as Meta;
 
-const Template: Story<CardsProps> = (args) => <Cards {...args} />;
+const eventsFromNames = actions("onClick");
+
+const Template: Story<CardsProps> = (args) => (
+  <Cards {...eventsFromNames} {...args} />
+);
 
 export const Auth = Template.bind({}) as Story<CardsProps>;
 Auth.args = {
-  children: <CardAuth variant="primary" />,
+  children: <CardAuth />,
   variant: "primary",
 };

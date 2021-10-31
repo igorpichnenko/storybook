@@ -3,10 +3,18 @@ import { Story, Meta } from "@storybook/react";
 
 import { CardNav } from "./index";
 import { CardNavProps } from "./CardNav.types";
+import { MemoryRouter } from "react-router";
 
 export default {
   title: "CardNav",
   component: CardNav,
+  decorators: [
+    (Story) => (
+      <MemoryRouter>
+        <Story />
+      </MemoryRouter>
+    ),
+  ],
 } as Meta;
 
 const Template: Story<CardNavProps> = (args) => <CardNav {...args} />;

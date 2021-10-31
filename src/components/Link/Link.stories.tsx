@@ -7,13 +7,16 @@ import { LinkProps } from "./Link.types";
 export default {
   title: "LinkProps",
   component: LinkComponent,
+  decorators: [
+    (Story) => (
+      <MemoryRouter>
+        <Story />
+      </MemoryRouter>
+    ),
+  ],
 } as Meta;
 
-const Template: Story<LinkProps> = (args) => (
-  <MemoryRouter>
-    <LinkComponent {...args} />
-  </MemoryRouter>
-);
+const Template: Story<LinkProps> = (args) => <LinkComponent {...args} />;
 
 export const Auth = Template.bind({}) as Story<LinkProps>;
 Auth.args = {
