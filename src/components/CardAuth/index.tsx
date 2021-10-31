@@ -16,19 +16,31 @@ export const CardAuth: React.FC<CardAuthProps> = ({
 }) => {
   const handleButtonAuthClick = () => {
     const formData = new FormData();
+    const login = "Alex";
+    const password = "123456";
     formData.append("login", "Alex");
     formData.append("password", "123456");
 
+    //(async () => {
+    //  try {
+    //    const resp = await axios.post("https://0gyog.mocklab.io/users/auth/", formData, {
+    //      headers: { "Content-Type": "application/x-www-form-urlencoded" }
+    //    });
+    //  } catch (e) {
+    //    console.log(e);
+    //  }
+    //})();
     (async () => {
       try {
-        const resp = await axios.post(
-          "https://0gyog.mocklab.io/users/auth/",
-          formData,
-          {
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          }
-        );
-        console.log(resp);
+        const resp = await fetch("https://0gyog.mocklab.io/users/auth/", {
+          method: "POST",
+          body: `login=${login}&password=${password}`,
+          headers: {
+            accept: "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        });
+        console.log(await resp.json());
       } catch (e) {
         console.log(e);
       }
