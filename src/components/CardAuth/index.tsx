@@ -13,6 +13,9 @@ export const CardAuth: React.FC<CardAuthProps> = ({
   handleClickAuth,
   ...rest
 }) => {
+  const handleButtonAuthClick = () => {
+    handleClickAuth();
+  };
   return (
     <form className={`${styles.cardAuth}  ${className}`} {...rest}>
       <CardNav isLink />
@@ -45,7 +48,11 @@ export const CardAuth: React.FC<CardAuthProps> = ({
           </div>
         </div>
         <div className={styles.buttons}>
-          <Button onClick={handleClickAuth} type="button" variant="primary">
+          <Button
+            onClick={handleButtonAuthClick}
+            type="button"
+            variant="primary"
+          >
             Войти
           </Button>
 
