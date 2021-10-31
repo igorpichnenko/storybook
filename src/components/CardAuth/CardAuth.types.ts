@@ -1,6 +1,5 @@
 import React from 'react';
 
 export type CardAuthProps = {
-  error?: string
-  handleClickAuth?: () => void
+  handleClickAuth?: (name: string) => void
 } & React.HTMLProps<HTMLFormElement>;

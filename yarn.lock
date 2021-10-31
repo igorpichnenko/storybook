@@ -13318,6 +13318,11 @@ storybook-addon-outline@^1.4.1:
     "@storybook/core-events" "^6.3.0"
     ts-dedent "^2.1.1"
 
+storybook-addon-state@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/storybook-addon-state/-/storybook-addon-state-1.0.3.tgz#f7657c7acfb2ac2adcbdccdd2ba6d95ebddd90a7"
+  integrity sha512-0lpedSYu2xIlq4QK/8YH4Cuj6vt2p8iRCcJBb4JFxyLZ6RAMHFFkf072BKl4WrU1LfLq3/7SD4snvxRoTjvsvw==
+
 storybook-axios@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/storybook-axios/-/storybook-axios-1.0.1.tgz#5c62223778dfab3d7b4dfbfc83d5317d14adf543"

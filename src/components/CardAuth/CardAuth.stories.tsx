@@ -19,13 +19,17 @@ export default {
 } as Meta;
 
 const Template: Story<CardAuthProps> = (args) => (
-  <CardAuth handleClickAuth={linkTo("SuccessCard")} {...args} />
+  <CardAuth
+    handleClickAuth={(name) => {
+      console.log(name);
+      return linkTo("SuccessCard")();
+    }}
+    {...args}
+  />
 );
 
 export const Default = Template.bind({}) as Story<CardAuthProps>;
 Default.args = {};
 
 export const Error = Template.bind({}) as Story<CardAuthProps>;
-Error.args = {
-  error: "true",
-};
+Error.args = {};
