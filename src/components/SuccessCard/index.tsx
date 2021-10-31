@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { SuccessCardProps } from "./SuccessCard.types";
 import useState from "storybook-addon-state";
@@ -14,23 +14,26 @@ export const SuccessCard: React.FC<SuccessCardProps> = ({
   ...rest
 }) => {
   const [userName, setUserName] = useState("name", [""]);
-  (async () => {
-    try {
-      const resp = await fetch("https://0gyog.mocklab.io/users/8/", {
-        method: "GET",
-        headers: {
-          accept: "application/json",
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-      });
+  useEffect(() => {
+    (async () => {
+      try {
+        const resp = await fetch("https://0gyog.mocklab.io/users/8/", {
+          method: "GET",
+          headers: {
+            accept: "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        });
 
-      const response = await resp.json();
-      console.log(response);
-      setUserName(response.user.name);
-    } catch (e) {
-      console.log(e);
-    }
-  })();
+        const response = await resp.json();
+        console.log(response);
+        setUserName(response.user.name);
+      } catch (e) {
+        console.log(e);
+      }
+    })();
+  }, []);
+
   return (
     <section className={`${styles.successCard}  ${className}`} {...rest}>
       <div className={styles.nav}>
