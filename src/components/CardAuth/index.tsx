@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { CardAuthProps } from "./CardAuth.types";
 import styles from "./CardAuth.module.scss";
@@ -6,6 +6,7 @@ import { CardNav } from "../CardNav";
 import { Input } from "../Input";
 import { Button } from "../Button";
 import { Alert } from "../Alert";
+import axios from "axios";
 
 export const CardAuth: React.FC<CardAuthProps> = ({
   className,
@@ -14,6 +15,24 @@ export const CardAuth: React.FC<CardAuthProps> = ({
   ...rest
 }) => {
   const handleButtonAuthClick = () => {
+    const formData = new FormData();
+    formData.append("login", "Alex");
+    formData.append("password", "123456");
+
+    (async () => {
+      try {
+        const resp = await axios.post(
+          "https://0gyog.mocklab.io/users/auth/",
+          formData,
+          {
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          }
+        );
+        console.log(resp);
+      } catch (e) {
+        console.log(e);
+      }
+    })();
     handleClickAuth();
   };
   return (
