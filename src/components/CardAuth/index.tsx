@@ -32,12 +32,13 @@ export const CardAuth: React.FC<CardAuthProps> = ({
             "Content-Type": "application/x-www-form-urlencoded",
           },
         });
+
         const response = await resp.json();
         handleClickAuth(response.user.name);
         setName(response.user.name);
       } catch (e) {
-        setError(e);
         console.log(e);
+        setError(e);
       }
     })();
   };
@@ -57,6 +58,7 @@ export const CardAuth: React.FC<CardAuthProps> = ({
             </div>
           ) : null}
           <Input
+            error={error ? "Ой-ей" : ""}
             name="email"
             type="text"
             variant="primary"
@@ -71,6 +73,7 @@ export const CardAuth: React.FC<CardAuthProps> = ({
           />
           <div className={styles.passInput}>
             <Input
+              error={error ? "Ой-ей" : ""}
               type="password"
               variant="secondary"
               placeholder="Пароль"
