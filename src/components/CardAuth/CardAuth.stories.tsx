@@ -30,6 +30,3 @@ const Template: Story<CardAuthProps> = (args) => (
 
 export const Default = Template.bind({}) as Story<CardAuthProps>;
 Default.args = {};
-
-export const Error = Template.bind({}) as Story<CardAuthProps>;
-Error.args = {};

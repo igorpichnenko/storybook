@@ -58,7 +58,7 @@ export const CardAuth: React.FC<CardAuthProps> = ({
             </div>
           ) : null}
           <Input
-            error={error ? "Ой-ей" : ""}
+            error={error ? "Ой-ёй" : ""}
             name="email"
             type="text"
             variant="primary"
@@ -73,7 +73,7 @@ export const CardAuth: React.FC<CardAuthProps> = ({
           />
           <div className={styles.passInput}>
             <Input
-              error={error ? "Ой-ей" : ""}
+              error={error ? "Ой-ёй" : ""}
               type="password"
               variant="secondary"
               placeholder="Пароль"
