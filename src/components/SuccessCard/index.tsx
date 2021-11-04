@@ -36,6 +36,7 @@ export const SuccessCard: React.FC<SuccessCardProps> = ({
 
   return (
     <section className={`${styles.successCard}  ${className}`} {...rest}>
+      <div className={styles.wrapper}>
       <div className={styles.nav}>
         <CardNav isLink={false} />
       </div>
@@ -49,6 +50,7 @@ export const SuccessCard: React.FC<SuccessCardProps> = ({
         <Button onClick={handleClickOut} type="button" variant="secondary">
           Выйти
         </Button>
+      </div>
       </div>
     </section>
   );
