@@ -15,7 +15,7 @@ export const Input: React.FC<InputProps> = ({
   id,
   ...rest
 }) => {
-  const inputClass = error ? styles.inputRed : "";
+  const inputClass = /* error ? styles.inputRed :  */"";
 
   return (
     <div className={styles.inputWrap}>

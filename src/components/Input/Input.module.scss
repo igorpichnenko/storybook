@@ -1,3 +1,5 @@
+@import "../../styles/styles.scss";
+
 .inputWrap {
   position: relative;
 }
@@ -25,8 +27,7 @@
   color: #191919;
 
   border-radius: 6px 6px 6px 6px;
-
-  @media (min-width: 321px) {
+  @media (max-width: $table-width) {
     background: rgba(0, 0, 0, 0.1);
 
     border-top: none;
@@ -41,13 +42,14 @@
     line-height: 20px;
 
     color: #aaaaaa;
-    @media (min-width: 321px) {
+    @media (max-width: $table-width) {
       color: white;
     }
   }
   &:focus {
     border: 1px solid #198cff;
-    @media (min-width: 321px) {
+
+    @media (max-width: $table-width) {
       background: rgba(0, 0, 0, 0.1);
 
       border-top: none;
@@ -62,9 +64,9 @@
   }
   &.secondary {
     border-radius: 0px 0px 6px 6px;
-    @media (min-width: 321px) {
+    /*   @media (min-width: 321px) {
       border-radius: 0px;
-    }
+    } */
   }
 }
 .input:focus + .label,
@@ -78,7 +80,7 @@
   position: absolute;
   top: 12px;
   left: 12px;
-  @media (min-width: 321px) {
+  @media (max-width: $table-width) {
     display: none;
   }
 }
@@ -94,26 +96,27 @@
   letter-spacing: -0.078px;
 
   color: #f15b3e;
+  display: none;
 
-  @media (max-width: 321px) {
+  /*   @media (max-width: 321px) {
     display: none;
-  }
+  } */
 }
 .label {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
+  display: none;
+  @media (max-width: $table-width) {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
 
-  color: #aaaaaa;
+    color: #aaaaaa;
 
-  position: absolute;
-  left: 0px;
-  top: 10px;
-  transition: top 0.5s;
-
-  @media (max-width: 321px) {
-    display: none;
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    transition: top 0.5s;
   }
 }
 .form {
@@ -122,7 +125,7 @@
 
 .inputRed {
   border-color: #f15b3e;
-  @media (max-width: 321px) {
+  /*  @media (max-width: 321px) {
     border-color: rgba(0, 0, 0, 0.1);
-  }
+  } */
 }

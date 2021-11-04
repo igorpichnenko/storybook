@@ -49,28 +49,31 @@ export const CardAuth: React.FC<CardAuthProps> = ({
       className={`${styles.cardAuth}  ${className}`}
       {...rest}
     >
-      <CardNav isLink />
-      <div className={styles.cardFooter}>
-        <div className={styles.inputs}>
+      <div className={styles.wrapper}>
+        <CardNav isLink />
+
+        <div className={styles.cardFooter}>
           {error ? (
             <div className={styles.error}>
               <Alert children="Ой-ёй" image="alert" />{" "}
             </div>
           ) : null}
-          <Input
-            error={error ? "Ой-ёй" : ""}
-            name="email"
-            type="text"
-            variant="primary"
-            placeholder="Логин или Почта"
-            image="email"
-            text="Логин или почта"
-            id="email"
-            htmlFor="email"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setLogin([e.target.value])
-            }
-          />
+          <div className={styles.inputEmail}>
+            <Input
+              error={error ? "Ой-ёй" : ""}
+              name="email"
+              type="text"
+              variant="primary"
+              placeholder="Логин или Почта"
+              image="email"
+              text="Логин или почта"
+              id="email"
+              htmlFor="email"
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setLogin([e.target.value])
+              }
+            />
+          </div>
           <div className={styles.passInput}>
             <Input
               error={error ? "Ой-ёй" : ""}
@@ -86,17 +89,17 @@ export const CardAuth: React.FC<CardAuthProps> = ({
               }
             />
           </div>
-        </div>
-        <div className={styles.buttons}>
-          <Button
-            onClick={handleButtonAuthClick}
-            type="submit"
-            variant="primary"
-          >
-            Войти
-          </Button>
 
-          <div className={styles.pass}>
+          <div className={styles.buttonAuth}>
+            <Button
+              onClick={handleButtonAuthClick}
+              type="submit"
+              variant="primary"
+            >
+              Войти
+            </Button>
+          </div>
+          <div className={styles.buttonPass}>
             <Button type="submit" variant="dim">
               Не помню пароль
             </Button>
