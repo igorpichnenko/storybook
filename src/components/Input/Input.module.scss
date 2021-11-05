@@ -9,76 +9,74 @@
 
   width: 100%;
 }
+
 .input {
+  padding: 10px 34px;
+  box-sizing: border-box;
   width: 100%;
   height: 40px;
-
-  padding: 10px 34px;
-
-  border: $border-secondary;
-  border-radius: $input-border-radius;
-  box-sizing: border-box;
-  outline: none;
-
   font-size: 14px;
   line-height: 20px;
-
-  background: $input-background;
   color: $text-color-primary;
+  background: $input-background;
+  border: $border-secondary;
+  border-radius: $input-border-radius;
+  outline: none;
 
   @media (max-width: $table-width) {
+    padding-left: 5px;
     background: $input-background-primary;
+    background-color: transparent;
 
     @include only-bottom-border;
-
-    background-color: transparent;
-    padding-left: 5px;
   }
 
   &::placeholder {
     font-size: 14px;
     line-height: 20px;
+    color: #aaa;
 
-    color: #aaaaaa;
     @media (max-width: $table-width) {
       color: $white;
     }
   }
+
   &:focus {
     border: $border-primary;
 
     @media (max-width: $table-width) {
+      padding-left: 5px;
       background: $input-background-primary;
+      background-color: $white;
 
       @include only-bottom-border;
-
-      background-color: $white;
-      padding-left: 5px;
     }
   }
+
   &.primary {
     border-radius: $top-border-radius;
   }
+
   &.secondary {
     border-radius: $bottom-border-radius;
+
     @media (max-width: $table-width) {
-      border-radius: 0px;
+      border-radius: 0;
     }
   }
 }
+
 .input:focus + .label,
 .input:not(:placeholder-shown) + .label {
   top: -10px;
 }
 
 .inputIcon {
-  width: 16px;
-  height: 16px;
-
   position: absolute;
-
   top: 12px;
   left: 12px;
+  width: 16px;
+  height: 16px;
 
   @media (max-width: $table-width) {
     display: none;
@@ -87,41 +85,35 @@
 
 .error {
   margin-top: 7px;
-
-  font-style: normal;
-  font-weight: normal;
   font-size: 13px;
   line-height: 16px;
-
+  font-weight: normal;
+  font-style: normal;
   letter-spacing: -0.078px;
-
   color: $error-color;
 
   @media (min-width: 835px) {
     display: none;
   }
 }
+
 .label {
   display: none;
 
   @media (max-width: $table-width) {
+    position: absolute;
+    top: 10px;
+    left: 0;
     display: block;
-
-    font-style: normal;
-    font-weight: normal;
     font-size: 12px;
     line-height: 14px;
-
+    font-weight: normal;
+    font-style: normal;
     color: $input-label-color;
-
-    position: absolute;
-
-    left: 0px;
-    top: 10px;
-
     transition: top 0.5s;
   }
 }
+
 .form {
   position: relative;
 }

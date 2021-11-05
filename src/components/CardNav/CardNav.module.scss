@@ -4,9 +4,7 @@
   @include flex-column;
 
   align-items: center;
-
   background: $white;
-
   box-shadow: $lower-shadow;
 
   &.simple {
@@ -15,14 +13,12 @@
 }
 
 .links {
-  display: flex;
-  justify-content: center;
-
   position: relative;
-
-  margin-bottom: 11.5px;
   margin-top: 19px;
+  margin-bottom: 11.5px;
+  display: flex;
   width: 100%;
+  justify-content: center;
 
   @media (max-width: $table-width) {
     margin-top: 55px;

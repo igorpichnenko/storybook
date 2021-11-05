@@ -1,44 +1,42 @@
-import React from "react";
-import useState from "storybook-addon-state";
+import React from 'react';
+import useState from 'storybook-addon-state';
 
-import { CardAuthProps } from "./CardAuth.types";
-import styles from "./CardAuth.module.scss";
-import { CardNav } from "../CardNav";
-import { Input } from "../Input";
-import { Button } from "../Button";
-import { Alert } from "../Alert";
+import { CardAuthProps } from './CardAuth.types';
+import styles from './CardAuth.module.scss';
+import { CardNav } from '../CardNav';
+import { Input } from '../Input';
+import { Button } from '../Button';
+import { Alert } from '../Alert';
 
 export const CardAuth: React.FC<CardAuthProps> = ({
   className,
   handleClickAuth,
   ...rest
 }) => {
-  const [name, setName] = useState("name", "");
-  const [login, setLogin] = useState("login", [""]);
-  const [password, setPassword] = useState("password", [""]);
-  const [error, setError] = useState("error", null);
+  const [name, setName] = useState('name', '');
+  const [login, setLogin] = useState('login', ['']);
+  const [password, setPassword] = useState('password', ['']);
+  const [error, setError] = useState('error', null);
 
   const handleSubmitFrom = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(e);
 
     (async () => {
       try {
-        const resp = await fetch("https://0gyog.mocklab.io/users/auth/", {
-          method: "POST",
+        const resp = await fetch('https://0gyog.mocklab.io/users/auth/', {
+          method: 'POST',
           body: `login=${login[0]}&password=${password[0]}`,
           headers: {
-            accept: "application/json",
-            "Content-Type": "application/x-www-form-urlencoded",
+            accept: 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded',
           },
         });
 
         const response = await resp.json();
         handleClickAuth(response.user.name);
         setName(response.user.name);
-      } catch (e) {
-        console.log(e);
-        setError(e);
+      } catch (errors) {
+        setError(errors);
       }
     })();
   };
@@ -55,12 +53,12 @@ export const CardAuth: React.FC<CardAuthProps> = ({
         <div className={styles.cardFooter}>
           {error ? (
             <div className={styles.error}>
-              <Alert children="Ой-ёй" image="alert" />{" "}
+              <Alert children="Ой-ёй" image="alert" />{' '}
             </div>
           ) : null}
           <div className={styles.inputEmail}>
             <Input
-              error={error ? "Ой-ёй" : ""}
+              error={error ? 'Ой-ёй' : ''}
               name="email"
               type="text"
               variant="primary"
@@ -69,14 +67,13 @@ export const CardAuth: React.FC<CardAuthProps> = ({
               text="Логин или почта"
               id="email"
               htmlFor="email"
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                setLogin([e.target.value])
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setLogin([e.target.value])
               }
             />
           </div>
           <div className={styles.passInput}>
             <Input
-              error={error ? "Ой-ёй" : ""}
+              error={error ? 'Ой-ёй' : ''}
               type="password"
               variant="secondary"
               placeholder="Пароль"
@@ -84,8 +81,7 @@ export const CardAuth: React.FC<CardAuthProps> = ({
               text="Пароль"
               id="password"
               htmlFor="password"
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                setPassword([e.target.value])
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword([e.target.value])
               }
             />
           </div>

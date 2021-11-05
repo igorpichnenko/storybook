@@ -2,20 +2,17 @@
 
 .alert {
   @include flex-column;
-  
-  align-items: flex-start;
-
-  color: $error-color;
 
   padding: 15px;
   width: 300px;
-
-  background: $error-background;
-  border-radius: 10px;
-
+  align-items: flex-start;
   font-size: 14px;
   line-height: 20px;
+  color: $error-color;
+  background: $error-background;
+  border-radius: 10px;
 }
+
 .items {
   display: flex;
 }

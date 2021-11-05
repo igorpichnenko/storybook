@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { InputProps } from "./Input.types";
-import styles from "./Input.module.scss";
+import { InputProps } from './Input.types';
+import styles from './Input.module.scss';
 
 export const Input: React.FC<InputProps> = ({
   variant,
@@ -13,7 +13,7 @@ export const Input: React.FC<InputProps> = ({
   id,
   ...rest
 }) => {
-  const inputClass = error ? styles.inputRed : "";
+  const inputClass = error ? styles.inputRed : '';
 
   return (
     <div className={styles.inputWrap}>

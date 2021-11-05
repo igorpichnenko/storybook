@@ -1,30 +1,21 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Igor\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @storybook-addon-state
+  /usr/local/bin/node /home/igor/.yarn/bin/yarn.js
 
 PATH: 
-  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Users\Igor\AppData\Local\Microsoft\WindowsApps;C:\Users\Igor\AppData\Roaming\npm;C:\Users\Igor\AppData\Local\Programs\Microsoft VS Code\bin
+  /home/igor/.yarn/bin:/home/igor/.config/yarn/global/node_modules/.bin:/home/igor/.yarn/bin:/home/igor/.config/yarn/global/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 Yarn version: 
-  1.22.11
+  1.22.15
 
 Node version: 
-  14.17.6
+  14.18.0
 
 Platform: 
-  win32 x64
+  linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@storybook-addon-state: Request "https://registry.yarnpkg.com/@storybook-addon-state" returned a 405
-      at Request.params.callback [as _callback] (C:\Users\Igor\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:67001:18)
-      at Request.self.callback (C:\Users\Igor\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140763:22)
-      at Request.emit (events.js:400:28)
-      at Request.<anonymous> (C:\Users\Igor\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141735:10)
-      at Request.emit (events.js:400:28)
-      at IncomingMessage.<anonymous> (C:\Users\Igor\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141657:12)
-      at Object.onceWrapper (events.js:519:28)
-      at IncomingMessage.emit (events.js:412:35)
-      at endReadableNT (internal/streams/readable.js:1317:12)
-      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+  Error: connect EHOSTUNREACH 136.243.171.228:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
 
 npm manifest: 
   {
@@ -67,7 +58,12 @@ npm manifest:
       "storybook-css-modules-preset": "^1.0.7",
       "storybook-react-router": "^1.0.8",
       "style-loader": "^2.0.0",
-      "typescript": "^4.2.3"
+      "typescript": "^4.2.3",
+      "stylelint": "^13.12.0",
+      "stylelint-config-standard": "^21.0.0",
+      "stylelint-order": "^4.1.0",
+      "stylelint-scss": "^3.19.0",
+      "eslint-config-airbnb-typescript": "^12.3.1"
     },
     "peerDependencies": {
       "react": ">=17.0.1",
@@ -77,7 +73,11 @@ npm manifest:
       "storybook": "start-storybook -s ./public 6006",
       "build-storybook": "build-storybook -s public",
       "deploy-storybook": "gh-pages -d storybook-static",
-      "deploy": "npm run build-storybook && gh-pages -d storybook-static"
+      "deploy": "npm run build-storybook && gh-pages -d storybook-static",
+      "lint:ts": "eslint . --ext .tsx,.ts",
+      "format:ts": "eslint . --ext .tsx,.ts --fix",
+      "lint:scss": "stylelint \"**/*.scss\"",
+      "format:scss": "stylelint \"**/*.scss\" --fix"
     },
     "dependencies": {
       "@storybook/router": "^6.3.12",
@@ -85,6 +85,7 @@ npm manifest:
       "@types/react-router-dom": "^5.3.2",
       "@types/storybook-react-router": "^1.0.1",
       "axios": "^0.24.0",
+      "storybook-addon-state": "^1.0.3",
       "storybook-axios": "^1.0.1",
       "storybook-router": "^0.3.4"
     }
@@ -13413,6 +13414,11 @@ Lockfile:
       "@storybook/components" "^6.3.0"
       "@storybook/core-events" "^6.3.0"
       ts-dedent "^2.1.1"
+  
+  storybook-addon-state@^1.0.3:
+    version "1.0.3"
+    resolved "https://registry.yarnpkg.com/storybook-addon-state/-/storybook-addon-state-1.0.3.tgz#f7657c7acfb2ac2adcbdccdd2ba6d95ebddd90a7"
+    integrity sha512-0lpedSYu2xIlq4QK/8YH4Cuj6vt2p8iRCcJBb4JFxyLZ6RAMHFFkf072BKl4WrU1LfLq3/7SD4snvxRoTjvsvw==
   
   storybook-axios@^1.0.1:
     version "1.0.1"

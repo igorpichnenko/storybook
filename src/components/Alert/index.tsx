@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { AlertProps } from "./Alert.types";
-import styles from "./Alert.module.scss";
+import { AlertProps } from './Alert.types';
+import styles from './Alert.module.scss';
 
 export const Alert: React.FC<AlertProps> = ({
   children,

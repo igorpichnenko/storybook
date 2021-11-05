@@ -4,58 +4,56 @@
   padding: 10px 20px;
   width: 100%;
   height: 40px;
-
-  border: unset;
-  background: $primary;
-  border-radius: $button-border-radius;
-
-  font-weight: 500;
   font-size: 15px;
   line-height: 20px;
+  font-weight: 500;
   text-align: center;
   letter-spacing: 0.005em;
-
   color: $white;
+  background: $primary;
+  border: unset;
+  border-radius: $button-border-radius;
 
   &:hover {
     background-color: $primary-hover;
   }
+
   &:active {
     background-color: $primary-active;
   }
 
   &.secondary {
-
+    color: $secondary-color;
     background: $secondary-background;
     border-radius: $button-border-radius;
 
-    color: $secondary-color;
     &:hover {
       background: $secondary-hover;
     }
+
     &:active {
       background-color: $secondary-active;
     }
   }
+
   &.dim {
-
-    border-radius: $button-border-radius;
-    background: unset;
-
     color: $dim;
+    background: unset;
+    border-radius: $button-border-radius;
 
     @media (max-width: $table-width) {
       font-size: 12px;
       line-height: 14px;
       text-align: right;
-
       color: $dim-table-width;
     }
-  }
-  &:hover {
-    background: $dim-hover;
-  }
-  &:active {
-    background: $dim-active;
+
+    &:hover {
+      background: $dim-hover;
+    }
+
+    &:active {
+      background: $dim-active;
+    }
   }
 }
