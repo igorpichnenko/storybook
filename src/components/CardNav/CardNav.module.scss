@@ -1,13 +1,13 @@
 @import "../../styles/styles.scss";
 
 .cardNav {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
+
   align-items: center;
 
-  background: #ffffff;
+  background: $white;
 
-  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: $lower-shadow;
 
   &.simple {
     justify-content: center;
@@ -17,16 +17,22 @@
 .links {
   display: flex;
   justify-content: center;
+
   position: relative;
+
   margin-bottom: 11.5px;
+  margin-top: 19px;
   width: 100%;
-  margin-top: 54px;
 
   @media (max-width: $table-width) {
-    margin-top: 90px;
+    margin-top: 55px;
   }
 }
 
 .reg {
   margin-left: 55px;
+}
+
+.logotype {
+  margin-bottom: 35px;
 }

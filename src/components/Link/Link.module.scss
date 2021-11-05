@@ -1,3 +1,5 @@
+@import "../../styles/styles.scss";
+
 .link {
   position: relative;
 
@@ -5,22 +7,22 @@
   font-size: 14px;
   line-height: 20px;
 
-  color: #828282;
+  color: $link-color-secondary;
 
   text-decoration: none;
 
   &.isActive {
-    color: #191919;
+    color: $line-color;
   }
 }
 
 .activeLine {
   position: absolute;
-
   top: 29px;
+
   width: 36px;
   height: 3px;
 
-  background: #198cff;
+  background: $link-color-primary;
   border-radius: 10px;
 }

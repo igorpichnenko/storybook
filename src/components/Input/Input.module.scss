@@ -5,34 +5,32 @@
 }
 
 .items {
-  display: flex;
+  @include flex-column;
+
   width: 100%;
-  flex-direction: column;
-  position: relative;
 }
 .input {
   width: 100%;
-
-  padding: 10px 34px;
   height: 40px;
 
-  background: #fafafa;
+  padding: 10px 34px;
 
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: $border-secondary;
+  border-radius: $input-border-radius;
   box-sizing: border-box;
+  outline: none;
 
   font-size: 14px;
   line-height: 20px;
-  outline: none;
-  color: #191919;
 
-  border-radius: 6px 6px 6px 6px;
+  background: $input-background;
+  color: $text-color-primary;
+
   @media (max-width: $table-width) {
-    background: rgba(0, 0, 0, 0.1);
+    background: $input-background-primary;
 
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    @include only-bottom-border;
+
     background-color: transparent;
     padding-left: 5px;
   }
@@ -43,30 +41,29 @@
 
     color: #aaaaaa;
     @media (max-width: $table-width) {
-      color: white;
+      color: $white;
     }
   }
   &:focus {
-    border: 1px solid #198cff;
+    border: $border-primary;
 
     @media (max-width: $table-width) {
-      background: rgba(0, 0, 0, 0.1);
+      background: $input-background-primary;
 
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      background-color: white;
+      @include only-bottom-border;
+
+      background-color: $white;
       padding-left: 5px;
     }
   }
   &.primary {
-    border-radius: 6px 6px 0px 0px;
+    border-radius: $top-border-radius;
   }
   &.secondary {
-    border-radius: 0px 0px 6px 6px;
-    /*   @media (min-width: 321px) {
+    border-radius: $bottom-border-radius;
+    @media (max-width: $table-width) {
       border-radius: 0px;
-    } */
+    }
   }
 }
 .input:focus + .label,
@@ -77,9 +74,12 @@
 .inputIcon {
   width: 16px;
   height: 16px;
+
   position: absolute;
+
   top: 12px;
   left: 12px;
+
   @media (max-width: $table-width) {
     display: none;
   }
@@ -95,27 +95,30 @@
 
   letter-spacing: -0.078px;
 
-  color: #f15b3e;
-  display: none;
+  color: $error-color;
 
-  /*   @media (max-width: 321px) {
+  @media (min-width: 835px) {
     display: none;
-  } */
+  }
 }
 .label {
   display: none;
+
   @media (max-width: $table-width) {
     display: block;
+
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 14px;
 
-    color: #aaaaaa;
+    color: $input-label-color;
 
     position: absolute;
+
     left: 0px;
     top: 10px;
+
     transition: top 0.5s;
   }
 }
@@ -124,8 +127,9 @@
 }
 
 .inputRed {
-  border-color: #f15b3e;
-  /*  @media (max-width: 321px) {
-    border-color: rgba(0, 0, 0, 0.1);
-  } */
+  border-color: $input-background-primary;
+
+  @media (max-width: $table-width) {
+    border-color: $error-color;
+  }
 }

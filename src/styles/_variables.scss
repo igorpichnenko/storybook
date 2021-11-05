@@ -1,9 +1,55 @@
 $primary: #2b96f1;
-$secondary: rgba(0, 0, 0, 0.07);
+$primary-hover: #138aef;
+$primary-active: #0f85e9;
+$white: #ffffff;
+$secondary-background: rgba(0, 0, 0, 0.07);
+$secondary-color: #5e5e5e;
+$secondary-hover: rgba(1, 1, 1, 0.1);
+$secondary-active: rgba(0, 0, 0, 0.12);
+$dim: #2b96f1;
+$dim-hover: rgba(43, 150, 241, 0.1);
+$dim-active: rgba(43, 150, 241, 0.2);
+$dim-table-width: #4ca6fe;
+$button-border-radius: 20px;
+$error-color: #f15b3e;
+$error-background: rgba(242, 107, 81, 0.12);
+$top-border-radius: 6px 6px 0px 0px;
+$bottom-border-radius: 0px 0px 6px 6px;
+$input-border-radius: 6px 6px 6px 6px;
+$input-background: #fafafa;
+$text-color-primary: #191919;
+$input-label-color: #aaaaaa;
+$input-background-primary: rgba(0, 0, 0, 0.1);
+$border-secondary: 1px solid $input-background-primary;
+$border-primary: 1px solid #198cff;
+$link-color-primary: #198cff;
+$link-color-secondary: #828282;
+$line-color: #191919;
+$shadow-color:rgba(0, 0, 0, 0.08);
+$card-shadow: 0px 0px 2px $shadow-color, 0px 2px 24px $shadow-color;
+
+$lower-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
 // media size
 $desktop-width: 1440px;
 $md-desktop-width: 1160px;
 $sm-desktop-width: 980px;
 $table-width: 834px;
-$phone-width: 480px;
+$phone-width: 414px;
 $sm-phone-width: 320px;
+
+//mixin
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin only-bottom-border {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
