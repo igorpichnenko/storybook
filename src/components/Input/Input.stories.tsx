@@ -14,7 +14,6 @@ const Template: Story<InputProps> = (args) => <Input {...args} />;
 export const Email = Template.bind({}) as Story<InputProps>;
 Email.args = {
   type: "email",
-  withIcon: true,
   image: "email",
   variant: "primary",
   placeholder: "Логин или почта",
@@ -25,7 +24,6 @@ Email.args = {
 export const Password = Template.bind({}) as Story<InputProps>;
 Password.args = {
   type: "password",
-  withIcon: true,
   image: "key",
   variant: "secondary",
   placeholder: "Пароль",
@@ -37,7 +35,6 @@ Password.args = {
 export const PasswordError = Template.bind({}) as Story<InputProps>;
 PasswordError.args = {
   type: "password",
-  withIcon: true,
   image: "key",
   variant: "secondary",
   placeholder: "Пароль",

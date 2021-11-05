@@ -1,6 +1,5 @@
-import React from 'react';
+import React from "react";
 
 export type CardNavProps = {
-  children?: React.ReactNode;
-  isLink?: boolean
+  isLink?: boolean;
 } & React.HTMLProps<HTMLDivElement>;

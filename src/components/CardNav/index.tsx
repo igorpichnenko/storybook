@@ -6,7 +6,6 @@ import { Logo } from "../Logo";
 import { LinkComponent } from "../Link";
 
 export const CardNav: React.FC<CardNavProps> = ({
-  children,
   className,
   isLink,
   ...rest

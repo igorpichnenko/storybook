@@ -5,9 +5,7 @@ import styles from "./Input.module.scss";
 
 export const Input: React.FC<InputProps> = ({
   variant,
-  children,
   className,
-  withIcon,
   image,
   error,
   text,
