@@ -28,9 +28,9 @@ export const CardAuth: React.FC<CardAuthProps> = ({
         });
 
         const response = await resp.json();
-      
+
       } catch (errors) {
-      
+
       }
     })(); */
   };
@@ -47,7 +47,7 @@ export const CardAuth: React.FC<CardAuthProps> = ({
         <div className={styles.cardFooter}>
           {error ? (
             <div className={styles.error}>
-              <Alert children="Ой-ёй" image="alert" />{' '}
+              <Alert children="Ой-ёй" image="alert" alt="alert" />{' '}
             </div>
           ) : null}
           <div className={styles.inputEmail}>
@@ -61,9 +61,7 @@ export const CardAuth: React.FC<CardAuthProps> = ({
               text="Логин или почта"
               id="email"
               htmlFor="email"
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                console.log(e)
-              }
+              alt="email"
             />
           </div>
           <div className={styles.passInput}>
@@ -76,9 +74,7 @@ export const CardAuth: React.FC<CardAuthProps> = ({
               text="Пароль"
               id="password"
               htmlFor="password"
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                console.log(e)
-              }
+              alt="password"
             />
           </div>
 

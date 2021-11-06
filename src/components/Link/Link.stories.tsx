@@ -1,4 +1,3 @@
-import { MemoryRouter } from 'react-router-dom';
 import { Story, Meta } from '@storybook/react';
 import { LinkComponent } from './index';
 import { LinkProps } from './Link.types';
@@ -6,13 +5,6 @@ import { LinkProps } from './Link.types';
 export default {
   title: 'LinkProps',
   component: LinkComponent,
-  decorators: [
-    (Story) => (
-      <MemoryRouter>
-        <Story />
-      </MemoryRouter>
-    ),
-  ],
 } as Meta;
 
 const Template: Story<LinkProps> = (args) => <LinkComponent {...args} />;

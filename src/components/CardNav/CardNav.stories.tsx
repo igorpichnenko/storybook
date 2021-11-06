@@ -7,16 +7,13 @@ import { CardNavProps } from './CardNav.types';
 export default {
   title: 'CardNav',
   component: CardNav,
-  decorators: [
-    (Story) => (
-      <MemoryRouter>
-        <Story />
-      </MemoryRouter>
-    ),
-  ],
 } as Meta;
 
-const Template: Story<CardNavProps> = (args) => <CardNav {...args} />;
+const Template: Story<CardNavProps> = (args) => (
+  <MemoryRouter>
+    <CardNav {...args} />
+  </MemoryRouter>
+);
 
 export const Default = Template.bind({}) as Story<CardNavProps>;
 Default.args = {

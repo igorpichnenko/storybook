@@ -17,7 +17,7 @@ export const CardNav: React.FC<CardNavProps> = ({
       {...rest}
     >
       <div className={styles.logotype}>
-        <Logo image="logo" />
+        <Logo image="logo" alt="logo" />
       </div>
       {isLink ? (
         <div className={styles.links}>
