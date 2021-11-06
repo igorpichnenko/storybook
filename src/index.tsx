@@ -1,7 +1,7 @@
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom';
 
-import { Home } from "../src/pages/Home";
+import { Home } from '../src/pages/Home';
 
-import "./styles/styles.scss";
+import './styles/styles.scss';
 
-ReactDOM.render(<Home />, document.getElementById("root"));
+ReactDOM.render(<Home />, document.getElementById('root'));

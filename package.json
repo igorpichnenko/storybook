@@ -27,7 +27,10 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "deploy-storybook": "npm run build-storybook && gh-pages -d storybook-static"
+    "deploy-storybook": "npm run build-storybook && gh-pages -d storybook-static",
+    "stylelint": "stylelint src/**/**/*.scss --fix",
+    "prettier": "prettier --write src/**/**/*",
+    "eslint": "eslint src --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -64,6 +67,17 @@
     "@storybook/node-logger": "^6.3.12",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.12",
-    "@types/react-router-dom": "^5.3.1"
+    "@types/react-router-dom": "^5.3.1",
+    "stylelint": "^12.0.0",
+    "stylelint-config-airbnb": "0.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-scss": "^3.13.0",
+    "stylelint-webpack-plugin": "^1.1.1",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-plugin-import": "^2.22.1",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "prettier": "^2.2.1"
   }
 }

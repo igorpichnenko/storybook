@@ -1,4 +1,4 @@
-@import "../../styles/styles.scss";
+@import '../../styles/styles.scss';
 
 .button {
   padding: 10px 20px;
@@ -8,7 +8,7 @@
   line-height: 20px;
   font-weight: 500;
   text-align: center;
-  letter-spacing: 0.005em;
+  letter-spacing: .005em;
   color: $white;
   background: $primary;
   border: unset;

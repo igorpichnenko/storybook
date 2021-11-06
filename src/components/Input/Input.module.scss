@@ -1,13 +1,13 @@
-@import "../../styles/styles.scss";
+@import '../../styles/styles.scss';
 
 .inputWrap {
   position: relative;
 }
 
 .items {
-  @include flex-column;
-
   width: 100%;
+
+  @include flex-column;
 }
 
 .input {
@@ -89,7 +89,7 @@
   line-height: 16px;
   font-weight: normal;
   font-style: normal;
-  letter-spacing: -0.078px;
+  letter-spacing: -.078px;
   color: $error-color;
 
   @media (min-width: 835px) {
@@ -110,7 +110,7 @@
     font-weight: normal;
     font-style: normal;
     color: $input-label-color;
-    transition: top 0.5s;
+    transition: top .5s;
   }
 }
 

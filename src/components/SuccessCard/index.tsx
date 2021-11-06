@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
-import { SuccessCardProps } from "./SuccessCard.types";
-import styles from "./SuccessCard.module.scss";
-import { CardNav } from "../CardNav";
-import { Button } from "../Button";
+import { SuccessCardProps } from './SuccessCard.types';
+import styles from './SuccessCard.module.scss';
+import { CardNav } from '../CardNav';
+import { Button } from '../Button';
 
 export const SuccessCard: React.FC<SuccessCardProps> = ({
   className,
   image,
   handleClickOut,
+  alt = 'my image',
   ...rest
 }) => {
   useEffect(() => {
@@ -34,9 +35,9 @@ export const SuccessCard: React.FC<SuccessCardProps> = ({
           <CardNav isLink={false} />
         </div>
         <div className={styles.items}>
-          <img className={styles.icon} src={`/${image}.svg`} alt="my image" />
+          <img className={styles.icon} src={`/${image}.svg`} alt={alt} />
           <h1 className={styles.title}>
-            Поздравляем, {"Alex"}!
+            Поздравляем, {'Alex'}!
             <br /> Вы успешно авторизированны
           </h1>
 

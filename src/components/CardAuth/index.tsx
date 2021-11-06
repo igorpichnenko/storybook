@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { CardAuthProps } from "./CardAuth.types";
-import styles from "./CardAuth.module.scss";
-import { CardNav } from "../CardNav";
-import { Input } from "../Input";
-import { Button } from "../Button";
-import { Alert } from "../Alert";
+import { CardAuthProps } from './CardAuth.types';
+import styles from './CardAuth.module.scss';
+import { CardNav } from '../CardNav';
+import { Input } from '../Input';
+import { Button } from '../Button';
+import { Alert } from '../Alert';
 
 export const CardAuth: React.FC<CardAuthProps> = ({
   className,
@@ -47,12 +47,12 @@ export const CardAuth: React.FC<CardAuthProps> = ({
         <div className={styles.cardFooter}>
           {error ? (
             <div className={styles.error}>
-              <Alert children="Ой-ёй" image="alert" />{" "}
+              <Alert children="Ой-ёй" image="alert" />{' '}
             </div>
           ) : null}
           <div className={styles.inputEmail}>
             <Input
-              error={error ? "Ой-ёй" : ""}
+              error={error ? 'Ой-ёй' : ''}
               name="email"
               type="text"
               variant="primary"
@@ -68,7 +68,7 @@ export const CardAuth: React.FC<CardAuthProps> = ({
           </div>
           <div className={styles.passInput}>
             <Input
-              error={error ? "Ой-ёй" : ""}
+              error={error ? 'Ой-ёй' : ''}
               type="password"
               variant="secondary"
               placeholder="Пароль"

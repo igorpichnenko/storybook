@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./Link.module.scss";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './Link.module.scss';
 
-import { LinkProps } from "./Link.types";
+import { LinkProps } from './Link.types';
 
 export const LinkComponent: React.FC<LinkProps> = ({
   to,
@@ -10,7 +10,7 @@ export const LinkComponent: React.FC<LinkProps> = ({
   isActive,
 }) => (
   <Link
-    className={`${styles.link} ${`${styles[isActive ? "isActive" : ""]}`}`}
+    className={`${styles.link} ${`${styles[isActive ? 'isActive' : '']}`}`}
     to={to}
   >
     {isActive ? <span className={styles.activeLine}></span> : null}

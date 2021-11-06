@@ -1,8 +1,6 @@
-@import "../../styles/styles.scss";
+@import '../../styles/styles.scss';
 
 .alert {
-  @include flex-column;
-
   padding: 15px;
   width: 300px;
   align-items: flex-start;
@@ -11,6 +9,8 @@
   color: $error-color;
   background: $error-background;
   border-radius: 10px;
+
+  @include flex-column;
 }
 
 .items {

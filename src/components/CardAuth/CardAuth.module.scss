@@ -1,4 +1,4 @@
-@import "../../styles/styles.scss";
+@import '../../styles/styles.scss';
 
 .cardAuth {
   position: fixed;
@@ -34,9 +34,9 @@
 }
 
 .cardFooter {
-  @include flex-column;
-
   margin-top: 25px;
+
+  @include flex-column;
 
   @media (max-width: $table-width) {
     margin-top: 181px;

@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import { CardNavProps } from "./CardNav.types";
-import styles from "./CardNav.module.scss";
-import { Logo } from "../Logo";
-import { LinkComponent } from "../Link";
+import { CardNavProps } from './CardNav.types';
+import styles from './CardNav.module.scss';
+import { Logo } from '../Logo';
+import { LinkComponent } from '../Link';
 
 export const CardNav: React.FC<CardNavProps> = ({
   className,
   isLink,
   ...rest
 }) => {
-  const noLinkHeader = isLink ? " " : styles.simple;
+  const noLinkHeader = isLink ? ' ' : styles.simple;
   return (
     <section
       className={`${styles.cardNav}  ${className} ${noLinkHeader}`}

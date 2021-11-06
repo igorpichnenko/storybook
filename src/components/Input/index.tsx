@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { InputProps } from "./Input.types";
-import styles from "./Input.module.scss";
+import { InputProps } from './Input.types';
+import styles from './Input.module.scss';
 
 export const Input: React.FC<InputProps> = ({
   variant,
@@ -11,9 +11,10 @@ export const Input: React.FC<InputProps> = ({
   text,
   htmlFor,
   id,
+  alt = 'my image',
   ...rest
 }) => {
-  const inputClass = error ? styles.inputRed : "";
+  const inputClass = error ? styles.inputRed : '';
 
   return (
     <div className={styles.inputWrap}>
@@ -32,11 +33,7 @@ export const Input: React.FC<InputProps> = ({
         </div>
         {error ? <span className={styles.error}>{error}</span> : null}
 
-        <img
-          className={styles.inputIcon}
-          src={`/${image}.svg`}
-          alt="my image"
-        />
+        <img className={styles.inputIcon} src={`/${image}.svg`} alt={alt} />
       </div>
     </div>
   );
