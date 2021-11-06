@@ -17,9 +17,7 @@ export class AuthService {
     return response;
   }
   async getUserName(id?: string) {
-    console.log(id);
     if (id) {
-      console.log(id);
       try {
         const resp = await fetch(`${API_URL}/users/${id}/`, {
           method: 'GET',
@@ -30,7 +28,6 @@ export class AuthService {
         });
 
         const response = await resp.json();
-        console.log(response.user.name);
         return response.user.name;
       } catch (e) {
         console.log(e);

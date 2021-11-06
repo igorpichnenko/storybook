@@ -15,6 +15,7 @@ export const SuccessCard: React.FC<SuccessCardProps> = ({
 }) => {
   const history = useHistory();
   const { authStore } = useStores();
+
   const userName = authStore.userName;
   const handleClickOut = () => {
     history.push('/');

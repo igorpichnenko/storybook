@@ -5,6 +5,7 @@ import { AuthService } from '../../services/authService';
 export class AuthStore {
   private authenticated = false;
   private name?: string;
+  private loading = false;
 
   constructor(private readonly authService: AuthService) {
     makeAutoObservable(this);
@@ -18,12 +19,14 @@ export class AuthStore {
       this.setAuthenticated(true);
       this.getUserName(tokenPayload.user.id);
     } catch {
-      localStorage.removeItem('MyApp_access_token');
       this.setAuthenticated(false);
     }
   }
 
-  private setAuthenticated(authenticated: boolean) {
+  public setAuthenticated(authenticated: boolean) {
+    if (!authenticated) {
+      localStorage.removeItem('MyApp_access_token');
+    }
     this.authenticated = authenticated;
   }
 

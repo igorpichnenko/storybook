@@ -66,6 +66,6 @@
     "deploy-storybook": "npm run build-storybook && gh-pages -d storybook-static",
     "stylelint": "stylelint src/**/**/*.scss --fix",
     "prettier": "prettier --write src/**/**/*",
-    "eslint": "eslint src --fix"
+    "eslint": "eslint --fix src/**/*"
   }
 }
