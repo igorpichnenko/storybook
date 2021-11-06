@@ -6,10 +6,8 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   plugins: ['@typescript-eslint'],
-  extends: ['airbnb-typescript/base'],
   rules: {
     'import/extensions': 'off',
     'import/prefer-default-export': 'off',
-    "linebreak-style": 0
   },
 };

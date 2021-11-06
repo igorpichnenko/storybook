@@ -1,32 +1,24 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { SuccessCardProps } from './SuccessCard.types';
 import styles from './SuccessCard.module.scss';
 import { CardNav } from '../CardNav';
 import { Button } from '../Button';
+import { useHistory } from 'react-router';
+import { useStores } from '../../stores';
 
 export const SuccessCard: React.FC<SuccessCardProps> = ({
   className,
   image,
-  handleClickOut,
   alt = 'my image',
   ...rest
 }) => {
-  useEffect(() => {
-    /*  (async () => {
-      try {
-        const resp = await fetch("https://0gyog.mocklab.io/users/8/", {
-          method: "GET",
-          headers: {
-            accept: "application/json",
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-        });
-
-        const response = await resp.json();
-      } catch (e) {}
-    })(); */
-  }, []);
+  const history = useHistory();
+  const { authStore } = useStores();
+  const userName = authStore.userName;
+  const handleClickOut = () => {
+    history.push('/');
+  };
 
   return (
     <section className={`${styles.successCard}  ${className}`} {...rest}>
@@ -37,7 +29,7 @@ export const SuccessCard: React.FC<SuccessCardProps> = ({
         <div className={styles.items}>
           <img className={styles.icon} src={`/${image}.svg`} alt={alt} />
           <h1 className={styles.title}>
-            Поздравляем, {'Alex'}!
+            Поздравляем, {userName}!
             <br /> Вы успешно авторизированны
           </h1>
 

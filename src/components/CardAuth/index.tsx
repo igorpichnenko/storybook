@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router';
 
 import { CardAuthProps } from './CardAuth.types';
 import styles from './CardAuth.module.scss';
@@ -6,35 +7,35 @@ import { CardNav } from '../CardNav';
 import { Input } from '../Input';
 import { Button } from '../Button';
 import { Alert } from '../Alert';
+import { useStores } from '../../stores';
 
 export const CardAuth: React.FC<CardAuthProps> = ({
   className,
   handleClickAuth,
+  error,
   ...rest
 }) => {
-  const error = null;
+  const { authStore } = useStores();
+  const isAuth = authStore.isAuthenticated;
+  const history = useHistory();
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleOnchangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(e.target.value);
+  };
+  const handleOnchangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
+
   const handleSubmitFrom = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    /*   (async () => {
-      try {
-        const resp = await fetch('https://0gyog.mocklab.io/users/auth/', {
-          method: 'POST',
-          body: `login=${login[0]}&password=${password[0]}`,
-          headers: {
-            accept: 'application/json',
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-        });
-
-        const response = await resp.json();
-
-      } catch (errors) {
-
-      }
-    })(); */
+    authStore.login({ username, password });
+    if (isAuth) {
+      history.push('success');
+    }
   };
-  const handleButtonAuthClick = () => {};
   return (
     <form
       onSubmit={handleSubmitFrom}
@@ -62,6 +63,7 @@ export const CardAuth: React.FC<CardAuthProps> = ({
               id="email"
               htmlFor="email"
               alt="email"
+              onChange={handleOnchangeName}
             />
           </div>
           <div className={styles.passInput}>
@@ -75,15 +77,12 @@ export const CardAuth: React.FC<CardAuthProps> = ({
               id="password"
               htmlFor="password"
               alt="password"
+              onChange={handleOnchangePassword}
             />
           </div>
 
           <div className={styles.buttonAuth}>
-            <Button
-              onClick={handleButtonAuthClick}
-              type="submit"
-              variant="primary"
-            >
+            <Button type="submit" variant="primary">
               Войти
             </Button>
           </div>
