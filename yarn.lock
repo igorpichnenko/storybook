@@ -1491,7 +1491,7 @@
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@eslint/eslintrc@^0.4.3":
+"@eslint/eslintrc@^0.4.0", "@eslint/eslintrc@^0.4.3":
   version "0.4.3"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@eslint/eslintrc/-/eslintrc-0.4.3.tgz#9e42981ef035beb3dd49add17acb96e8ff6f394c"
   integrity sha512-J6KFFz5QCYUJq3pf0mjEcCJVERbzv71PUIDczuh9JkwGEzced6CO5ADLHB1rbf/+oPBtoPfMYNOpGDzCANlbXw==
@@ -1933,7 +1933,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@storybook/addon-actions@6.4.0-alpha.40", "@storybook/addon-actions@^6.3.12":
+"@storybook/addon-actions@6.3.12", "@storybook/addon-actions@6.4.0-alpha.40":
   version "6.4.0-alpha.32"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@storybook/addon-actions/-/addon-actions-6.4.0-alpha.32.tgz#3f73fa02618976d13978818d8803209e01bdfd4b"
   integrity sha512-3JoQzcsstBc767F10StQNhhjThe5hD5dmnvI37RnSAiSy9sHEdRGYvK1RM+eHFREV1po62g3sUEpOnJj939HuA==
@@ -2044,7 +2044,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-essentials@^6.3.12":
+"@storybook/addon-essentials@6.3.12":
   version "6.4.0-alpha.40"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@storybook/addon-essentials/-/addon-essentials-6.4.0-alpha.40.tgz#77dc3e59192c17bcde776d8476fdeb8c0e9aa8fe"
   integrity sha512-MDxeNSBp2i7B0h3DIyulw3oMvBVDrEWifhLPtBD/pVdLH9/Zd2uQ/9dwBOi5fWT+m6OYon/PpSuZSeZLFAK95g==
@@ -2064,7 +2064,7 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-links@^6.3.12":
+"@storybook/addon-links@6.3.12":
   version "6.4.0-alpha.32"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@storybook/addon-links/-/addon-links-6.4.0-alpha.32.tgz#09a6af05f6b7877db0d01a7cbf974d728bc7acaa"
   integrity sha512-Sdy3tmmw5VMDOdgVRLsRx/7YdnyfgyucrQxLtGYWE6lHRSU80grzCI/NYePGuff+nGyrEFXZEcok3GMdZZA+UQ==
@@ -2730,7 +2730,7 @@
     webpack-dev-middleware "^3.7.3"
     webpack-virtual-modules "^0.2.2"
 
-"@storybook/node-logger@6.4.0-alpha.32", "@storybook/node-logger@6.4.0-alpha.40", "@storybook/node-logger@^6.3.12":
+"@storybook/node-logger@6.3.12", "@storybook/node-logger@6.4.0-alpha.32", "@storybook/node-logger@6.4.0-alpha.40":
   version "6.4.0-alpha.32"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@storybook/node-logger/-/node-logger-6.4.0-alpha.32.tgz#4a4845a0533bf62e836fb5e786cf6ec243d0c3e8"
   integrity sha512-FDwuCKG/HkWVenYs18FHN6euMwy9VPSaJG0YwrFQD0ykeyEoxfiV9StznUMIy8BJ8CfkDZSy7DMEx6v8wfasjg==
@@ -2748,7 +2748,7 @@
   dependencies:
     core-js "^3.8.2"
 
-"@storybook/preset-create-react-app@^3.2.0":
+"@storybook/preset-create-react-app@3.2.0":
   version "3.2.0"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@storybook/preset-create-react-app/-/preset-create-react-app-3.2.0.tgz#660597906847e38e9d886241d3d8e2ecc770a2eb"
   integrity sha512-lLoWCGr5cV+JNDRKYHC2gD+P2eyBqdN8qhmBa+PxDgPSNKfgUf9Wnoh+C7WTG5q2DEeR9SvUpQpZomX9DDQa4Q==
@@ -2795,7 +2795,7 @@
     react-docgen-typescript "^2.0.0"
     tslib "^2.0.0"
 
-"@storybook/react@^6.3.12":
+"@storybook/react@6.3.12":
   version "6.4.0-alpha.32"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@storybook/react/-/react-6.4.0-alpha.32.tgz#c48c3b9d7447dfdb1c7e59594921e6fc54086ec3"
   integrity sha512-p/59qufsV4XOZz76s+zrhi1sq+ovUnm1q2GhnnWILz5bf4NwF17ZRaCXvMA1WApE9RXYcxsfwL05XNtuAStYZA==
@@ -3060,7 +3060,7 @@
     lz-string "^1.4.4"
     pretty-format "^26.6.2"
 
-"@testing-library/jest-dom@^5.14.1":
+"@testing-library/jest-dom@5.14.1":
   version "5.14.1"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@testing-library/jest-dom/-/jest-dom-5.14.1.tgz#8501e16f1e55a55d675fe73eecee32cdaddb9766"
   integrity sha512-dfB7HVIgTNCxH22M1+KU6viG5of2ldoA5ly8Ar8xkezKHKXjRvznCdbMbqjYGgO2xjRbwnR+rR8MLUIqF3kKbQ==
@@ -3075,7 +3075,7 @@
     lodash "^4.17.15"
     redent "^3.0.0"
 
-"@testing-library/react@^11.2.7":
+"@testing-library/react@11.2.7":
   version "11.2.7"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@testing-library/react/-/react-11.2.7.tgz#b29e2e95c6765c815786c0bc1d5aed9cb2bf7818"
   integrity sha512-tzRNp7pzd5QmbtXNG/mhdcl7Awfu/Iz1RaVHY75zTdOkmHCuzMhRL83gWHSgOAcjS3CCbyfwUHMZgRJb4kAfpA==
@@ -3083,7 +3083,7 @@
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^7.28.1"
 
-"@testing-library/user-event@^12.8.3":
+"@testing-library/user-event@12.8.3":
   version "12.8.3"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@testing-library/user-event/-/user-event-12.8.3.tgz#1aa3ed4b9f79340a1e1836bc7f57c501e838704a"
   integrity sha512-IR0iWbFkgd56Bu5ZI/ej8yQwrkCv8Qydx6RzwbKz9faXazR/+5tvYKsZQgyXJiwgpcva127YO6JcWy7YlCfofQ==
@@ -3232,7 +3232,7 @@
     jest-diff "^27.0.0"
     pretty-format "^27.0.0"
 
-"@types/jest@^26.0.24":
+"@types/jest@26.0.24":
   version "26.0.24"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@types/jest/-/jest-26.0.24.tgz#943d11976b16739185913a1936e0de0c4a7d595a"
   integrity sha512-E/X5Vib8BWqZNRlDxj9vYXhsDwPYbPINqKF9BsnSoon4RQ0D9moEuLD8txgyypFLH7J4+Lho9Nr/c8H0Fi+17w==
@@ -3282,7 +3282,7 @@
     "@types/node" "*"
     form-data "^3.0.0"
 
-"@types/node@*", "@types/node@^12.20.34":
+"@types/node@*", "@types/node@12.20.34":
   version "16.7.8"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@types/node/-/node-16.7.8.tgz#2448be5f24fe6b77114632b6350fcd219334651e"
   integrity sha512-8upnoQU0OPzbIkm+ZMM0zCeFCkw2s3mS0IWdx0+AAaWqm4fkBb0UJp8Edl7FVKRamYbpJC/aVsHpKWBIbiC7Zg==
@@ -3349,14 +3349,14 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-dom@^17.0.10":
+"@types/react-dom@17.0.10":
   version "17.0.9"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@types/react-dom/-/react-dom-17.0.9.tgz#441a981da9d7be117042e1a6fd3dac4b30f55add"
   integrity sha512-wIvGxLfgpVDSAMH5utdL9Ngm5Owu0VsGmldro3ORLXV8CShrL8awVj06NuEXFQ5xyaYfdca7Sgbk/50Ri1GdPg==
   dependencies:
     "@types/react" "*"
 
-"@types/react-router-dom@^5.3.1":
+"@types/react-router-dom@5.3.1":
   version "5.1.8"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@types/react-router-dom/-/react-router-dom-5.1.8.tgz#bf3e1c8149b3d62eaa206d58599de82df0241192"
   integrity sha512-03xHyncBzG0PmDmf8pf3rehtjY0NpUj7TIN46FrT5n1ZWHPZvXz32gUyNboJ+xsL8cpg8bQVLcllptcQHvocrw==
@@ -3380,7 +3380,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^17.0.31":
+"@types/react@*", "@types/react@17.0.31":
   version "17.0.19"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@types/react/-/react-17.0.19.tgz#8f2a85e8180a43b57966b237d26a29481dacc991"
   integrity sha512-sX1HisdB1/ZESixMTGnMxH9TDe8Sk709734fEQZzCV/4lSu9kJCPbo2PbTRoZM+53Pp0P10hYVyReUueGwUi4A==
@@ -3496,7 +3496,21 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^4.21.0", "@typescript-eslint/eslint-plugin@^4.5.0":
+"@typescript-eslint/eslint-plugin@4.21.0":
+  version "4.21.0"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@typescript-eslint/eslint-plugin/-/eslint-plugin-4.21.0.tgz#3fce2bfa76d95c00ac4f33dff369cb593aab8878"
+  integrity sha512-FPUyCPKZbVGexmbCFI3EQHzCZdy2/5f+jv6k2EDljGdXSRc0cKvbndd2nHZkSLqCNOPk0jB6lGzwIkglXcYVsQ==
+  dependencies:
+    "@typescript-eslint/experimental-utils" "4.21.0"
+    "@typescript-eslint/scope-manager" "4.21.0"
+    debug "^4.1.1"
+    functional-red-black-tree "^1.0.1"
+    lodash "^4.17.15"
+    regexpp "^3.0.0"
+    semver "^7.3.2"
+    tsutils "^3.17.1"
+
+"@typescript-eslint/eslint-plugin@^4.5.0":
   version "4.30.0"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@typescript-eslint/eslint-plugin/-/eslint-plugin-4.30.0.tgz#4a0c1ae96b953f4e67435e20248d812bfa55e4fb"
   integrity sha512-NgAnqk55RQ/SD+tZFD9aPwNSeHmDHHe5rtUyhIq0ZeCWZEvo4DK9rYz7v9HDuQZFvn320Ot+AikaCKMFKLlD0g==
@@ -3508,6 +3522,18 @@
     regexpp "^3.1.0"
     semver "^7.3.5"
     tsutils "^3.21.0"
+
+"@typescript-eslint/experimental-utils@4.21.0":
+  version "4.21.0"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@typescript-eslint/experimental-utils/-/experimental-utils-4.21.0.tgz#0b0bb7c15d379140a660c003bdbafa71ae9134b6"
+  integrity sha512-cEbgosW/tUFvKmkg3cU7LBoZhvUs+ZPVM9alb25XvR0dal4qHL3SiUqHNrzoWSxaXA9gsifrYrS1xdDV6w/gIA==
+  dependencies:
+    "@types/json-schema" "^7.0.3"
+    "@typescript-eslint/scope-manager" "4.21.0"
+    "@typescript-eslint/types" "4.21.0"
+    "@typescript-eslint/typescript-estree" "4.21.0"
+    eslint-scope "^5.0.0"
+    eslint-utils "^2.0.0"
 
 "@typescript-eslint/experimental-utils@4.30.0", "@typescript-eslint/experimental-utils@^4.0.1":
   version "4.30.0"
@@ -3532,7 +3558,17 @@
     eslint-scope "^5.0.0"
     eslint-utils "^2.0.0"
 
-"@typescript-eslint/parser@^4.21.0", "@typescript-eslint/parser@^4.4.1", "@typescript-eslint/parser@^4.5.0":
+"@typescript-eslint/parser@4.21.0":
+  version "4.21.0"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@typescript-eslint/parser/-/parser-4.21.0.tgz#a227fc2af4001668c3e3f7415d4feee5093894c1"
+  integrity sha512-eyNf7QmE5O/l1smaQgN0Lj2M/1jOuNg2NrBm1dqqQN0sVngTLyw8tdCbih96ixlhbF1oINoN8fDCyEH9SjLeIA==
+  dependencies:
+    "@typescript-eslint/scope-manager" "4.21.0"
+    "@typescript-eslint/types" "4.21.0"
+    "@typescript-eslint/typescript-estree" "4.21.0"
+    debug "^4.1.1"
+
+"@typescript-eslint/parser@^4.4.1", "@typescript-eslint/parser@^4.5.0":
   version "4.30.0"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@typescript-eslint/parser/-/parser-4.30.0.tgz#6abd720f66bd790f3e0e80c3be77180c8fcb192d"
   integrity sha512-HJ0XuluSZSxeboLU7Q2VQ6eLlCwXPBOGnA7CqgBnz2Db3JRQYyBDJgQnop6TZ+rsbSx5gEdWhw4rE4mDa1FnZg==
@@ -3541,6 +3577,14 @@
     "@typescript-eslint/types" "4.30.0"
     "@typescript-eslint/typescript-estree" "4.30.0"
     debug "^4.3.1"
+
+"@typescript-eslint/scope-manager@4.21.0":
+  version "4.21.0"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@typescript-eslint/scope-manager/-/scope-manager-4.21.0.tgz#c81b661c4b8af1ec0c010d847a8f9ab76ab95b4d"
+  integrity sha512-kfOjF0w1Ix7+a5T1knOw00f7uAP9Gx44+OEsNQi0PvvTPLYeXJlsCJ4tYnDj5PQEYfpcgOH5yBlw7K+UEI9Agw==
+  dependencies:
+    "@typescript-eslint/types" "4.21.0"
+    "@typescript-eslint/visitor-keys" "4.21.0"
 
 "@typescript-eslint/scope-manager@4.30.0":
   version "4.30.0"
@@ -3554,6 +3598,11 @@
   version "3.10.1"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@typescript-eslint/types/-/types-3.10.1.tgz#1d7463fa7c32d8a23ab508a803ca2fe26e758727"
   integrity sha512-+3+FCUJIahE9q0lDi1WleYzjCwJs5hIsbugIgnbB+dSCYUxl8L6PwmsyOPFZde2hc1DlTo/xnkOgiTLSyAbHiQ==
+
+"@typescript-eslint/types@4.21.0":
+  version "4.21.0"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@typescript-eslint/types/-/types-4.21.0.tgz#abdc3463bda5d31156984fa5bc316789c960edef"
+  integrity sha512-+OQaupjGVVc8iXbt6M1oZMwyKQNehAfLYJJ3SdvnofK2qcjfor9pEM62rVjBknhowTkh+2HF+/KdRAc/wGBN2w==
 
 "@typescript-eslint/types@4.30.0":
   version "4.30.0"
@@ -3571,6 +3620,19 @@
     glob "^7.1.6"
     is-glob "^4.0.1"
     lodash "^4.17.15"
+    semver "^7.3.2"
+    tsutils "^3.17.1"
+
+"@typescript-eslint/typescript-estree@4.21.0":
+  version "4.21.0"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@typescript-eslint/typescript-estree/-/typescript-estree-4.21.0.tgz#3817bd91857beeaeff90f69f1f112ea58d350b0a"
+  integrity sha512-ZD3M7yLaVGVYLw4nkkoGKumb7Rog7QID9YOWobFDMQKNl+vPxqVIW/uDk+MDeGc+OHcoG2nJ2HphwiPNajKw3w==
+  dependencies:
+    "@typescript-eslint/types" "4.21.0"
+    "@typescript-eslint/visitor-keys" "4.21.0"
+    debug "^4.1.1"
+    globby "^11.0.1"
+    is-glob "^4.0.1"
     semver "^7.3.2"
     tsutils "^3.17.1"
 
@@ -3593,6 +3655,14 @@
   integrity sha512-9JgC82AaQeglebjZMgYR5wgmfUdUc+EitGUUMW8u2nDckaeimzW+VsoLV6FoimPv2id3VQzfjwBxEMVz08ameQ==
   dependencies:
     eslint-visitor-keys "^1.1.0"
+
+"@typescript-eslint/visitor-keys@4.21.0":
+  version "4.21.0"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/@typescript-eslint/visitor-keys/-/visitor-keys-4.21.0.tgz#990a9acdc124331f5863c2cf21c88ba65233cd8d"
+  integrity sha512-dH22dROWGi5Z6p+Igc8bLVLmwy7vEe8r+8c+raPQU0LxgogPUrRAtRGtvBWmlr9waTu3n+QLt/qrS/hWzk1x5w==
+  dependencies:
+    "@typescript-eslint/types" "4.21.0"
+    eslint-visitor-keys "^2.0.0"
 
 "@typescript-eslint/visitor-keys@4.30.0":
   version "4.30.0"
@@ -4151,7 +4221,7 @@ array-unique@^0.3.2:
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/array-unique/-/array-unique-0.3.2.tgz#a894b75d4bc4f6cd679ef3244a9fd8f46ae2d428"
   integrity sha1-qJS3XUvE9s1nnvMkSp/Y9Gri1Cg=
 
-array.prototype.flat@^1.2.1, array.prototype.flat@^1.2.4:
+array.prototype.flat@^1.2.1, array.prototype.flat@^1.2.3, array.prototype.flat@^1.2.4:
   version "1.2.4"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/array.prototype.flat/-/array.prototype.flat-1.2.4.tgz#6ef638b43312bd401b4c6199fdec7e2dc9e9a123"
   integrity sha512-4470Xi3GAPAjZqFcljX2xzckv1qeKPizoNkiS0+O4IoPR2ZNpcjE0pkhdihlDouK+x6QOast26B4Q/O9DJnwSg==
@@ -6142,6 +6212,11 @@ constants-browserify@^1.0.0:
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/constants-browserify/-/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
   integrity sha1-wguW2MYXdIqvHBYCF2DNJ/y4y3U=
 
+contains-path@^0.1.0:
+  version "0.1.0"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/contains-path/-/contains-path-0.1.0.tgz#fe8cf184ff6670b6baef01a9d4861a5cbec4120a"
+  integrity sha1-/ozxhP9mcLa67wGp1IYaXL7EEgo=
+
 content-disposition@0.5.3:
   version "0.5.3"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/content-disposition/-/content-disposition-0.5.3.tgz#e130caf7e7279087c5616c2007d0485698984fbd"
@@ -6982,6 +7057,14 @@ dns-txt@^2.0.2:
   dependencies:
     buffer-indexof "^1.0.0"
 
+doctrine@1.5.0:
+  version "1.5.0"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/doctrine/-/doctrine-1.5.0.tgz#379dce730f6166f76cefa4e6707a159b02c5a6fa"
+  integrity sha1-N53Ocw9hZvds76TmcHoVmwLFpvo=
+  dependencies:
+    esutils "^2.0.2"
+    isarray "^1.0.0"
+
 doctrine@^2.1.0:
   version "2.1.0"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/doctrine/-/doctrine-2.1.0.tgz#5cd01fc101621b42c4cd7f5d1a66243716d3f39d"
@@ -7505,7 +7588,7 @@ eslint-config-airbnb-base@^14.2.0, eslint-config-airbnb-base@^14.2.1:
     object.assign "^4.1.2"
     object.entries "^1.1.2"
 
-eslint-config-airbnb-typescript@^12.3.1:
+eslint-config-airbnb-typescript@12.3.1:
   version "12.3.1"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/eslint-config-airbnb-typescript/-/eslint-config-airbnb-typescript-12.3.1.tgz#83ab40d76402c208eb08516260d1d6fac8f8acbc"
   integrity sha512-ql/Pe6/hppYuRp4m3iPaHJqkBB7dgeEmGPQ6X0UNmrQOfTF+dXw29/ZjU2kQ6RDoLxaxOA+Xqv07Vbef6oVTWw==
@@ -7530,7 +7613,7 @@ eslint-config-react-app@^6.0.0:
   dependencies:
     confusing-browser-globals "^1.0.10"
 
-eslint-import-resolver-node@^0.3.6:
+eslint-import-resolver-node@^0.3.4, eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.6.tgz#4048b958395da89668252001dbd9eca6b83bacbd"
   integrity sha512-0En0w03NRVMn9Uiyn8YRPDKvWjxCWkslUEhGNTdGx15RvPJYQ+lbOlqrlNI2vEAs4pDYK4f/HN2TbDmk5TP0iw==
@@ -7538,7 +7621,7 @@ eslint-import-resolver-node@^0.3.6:
     debug "^3.2.7"
     resolve "^1.20.0"
 
-eslint-module-utils@^2.6.2:
+eslint-module-utils@^2.6.0, eslint-module-utils@^2.6.2:
   version "2.6.2"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/eslint-module-utils/-/eslint-module-utils-2.6.2.tgz#94e5540dd15fe1522e8ffa3ec8db3b7fa7e7a534"
   integrity sha512-QG8pcgThYOuqxupd06oYTZoNOGaUdTY1PqK+oS6ElF6vs4pBdk/aYxFVQQXzcrAqp9m7cl7lb2ubazX+g16k2Q==
@@ -7553,6 +7636,25 @@ eslint-plugin-flowtype@^5.2.0:
   dependencies:
     lodash "^4.17.15"
     string-natural-compare "^3.0.1"
+
+eslint-plugin-import@2.22.1:
+  version "2.22.1"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/eslint-plugin-import/-/eslint-plugin-import-2.22.1.tgz#0896c7e6a0cf44109a2d97b95903c2bb689d7702"
+  integrity sha512-8K7JjINHOpH64ozkAhpT3sd+FswIZTfMZTjdx052pnWrgRCVfp8op9tbjpAk3DdUeI/Ba4C8OjdC0r90erHEOw==
+  dependencies:
+    array-includes "^3.1.1"
+    array.prototype.flat "^1.2.3"
+    contains-path "^0.1.0"
+    debug "^2.6.9"
+    doctrine "1.5.0"
+    eslint-import-resolver-node "^0.3.4"
+    eslint-module-utils "^2.6.0"
+    has "^1.0.3"
+    minimatch "^3.0.4"
+    object.values "^1.1.1"
+    read-pkg-up "^2.0.0"
+    resolve "^1.17.0"
+    tsconfig-paths "^3.9.0"
 
 eslint-plugin-import@^2.22.1:
   version "2.24.2"
@@ -7682,7 +7784,50 @@ eslint-webpack-plugin@^2.5.2:
     normalize-path "^3.0.0"
     schema-utils "^3.0.0"
 
-eslint@^7.11.0, eslint@^7.23.0:
+eslint@7.23.0:
+  version "7.23.0"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/eslint/-/eslint-7.23.0.tgz#8d029d252f6e8cf45894b4bee08f5493f8e94325"
+  integrity sha512-kqvNVbdkjzpFy0XOszNwjkKzZ+6TcwCQ/h+ozlcIWwaimBBuhlQ4nN6kbiM2L+OjDcznkTJxzYfRFH92sx4a0Q==
+  dependencies:
+    "@babel/code-frame" "7.12.11"
+    "@eslint/eslintrc" "^0.4.0"
+    ajv "^6.10.0"
+    chalk "^4.0.0"
+    cross-spawn "^7.0.2"
+    debug "^4.0.1"
+    doctrine "^3.0.0"
+    enquirer "^2.3.5"
+    eslint-scope "^5.1.1"
+    eslint-utils "^2.1.0"
+    eslint-visitor-keys "^2.0.0"
+    espree "^7.3.1"
+    esquery "^1.4.0"
+    esutils "^2.0.2"
+    file-entry-cache "^6.0.1"
+    functional-red-black-tree "^1.0.1"
+    glob-parent "^5.0.0"
+    globals "^13.6.0"
+    ignore "^4.0.6"
+    import-fresh "^3.0.0"
+    imurmurhash "^0.1.4"
+    is-glob "^4.0.0"
+    js-yaml "^3.13.1"
+    json-stable-stringify-without-jsonify "^1.0.1"
+    levn "^0.4.1"
+    lodash "^4.17.21"
+    minimatch "^3.0.4"
+    natural-compare "^1.4.0"
+    optionator "^0.9.1"
+    progress "^2.0.0"
+    regexpp "^3.1.0"
+    semver "^7.2.1"
+    strip-ansi "^6.0.0"
+    strip-json-comments "^3.1.0"
+    table "^6.0.4"
+    text-table "^0.2.0"
+    v8-compile-cache "^2.0.3"
+
+eslint@^7.11.0:
   version "7.32.0"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/eslint/-/eslint-7.32.0.tgz#c6d328a14be3fb08c8d1d21e12c02fdb7a2a812d"
   integrity sha512-VHZ8gX+EDfz+97jGcgyGCyRia/dPOd6Xh9yPv8Bl1+SoaIwD+a/vlrOmGRUyOYu7MwUhc7CxqeaDZU13S4+EpA==
@@ -8677,7 +8822,7 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-gh-pages@^3.2.3:
+gh-pages@3.2.3:
   version "3.2.3"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/gh-pages/-/gh-pages-3.2.3.tgz#897e5f15e111f42af57d21d430b83e5cdf29472c"
   integrity sha512-jA1PbapQ1jqzacECfjUaO9gV8uBgU6XNMV0oXLtfCX3haGLe5Atq8BxlrADhbD6/UdG9j6tZLWAkAybndOXTJg==
@@ -8718,7 +8863,7 @@ glob-parent@^3.1.0:
     is-glob "^3.1.0"
     path-dirname "^1.0.0"
 
-glob-parent@^5.1.2, glob-parent@~5.1.2:
+glob-parent@^5.0.0, glob-parent@^5.1.2, glob-parent@~5.1.2:
   version "5.1.2"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
   integrity sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==
@@ -8816,7 +8961,7 @@ globby@11.0.1:
     merge2 "^1.3.0"
     slash "^3.0.0"
 
-globby@^11.0.2, globby@^11.0.3:
+globby@^11.0.1, globby@^11.0.2, globby@^11.0.3:
   version "11.0.4"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/globby/-/globby-11.0.4.tgz#2cbaff77c2f2a62e71e9b2813a67b97a3a3001a5"
   integrity sha512-9O4MVG9ioZJ08ffbcyVYyLOJLk5JQ688pJ4eMGLpdWLHq/Wr1D9BlriLQyL0E+jbkuePVZXYFj47QM/v093wHg==
@@ -11227,10 +11372,25 @@ lodash.flattendeep@^4.4.0:
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/lodash.flattendeep/-/lodash.flattendeep-4.4.0.tgz#fb030917f86a3134e5bc9bec0d69e0013ddfedb2"
   integrity sha1-+wMJF/hqMTTlvJvsDWngAT3f7bI=
 
+lodash.isboolean@^3.0.3:
+  version "3.0.3"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/lodash.isboolean/-/lodash.isboolean-3.0.3.tgz#6c2e171db2a257cd96802fd43b01b20d5f5870f6"
+  integrity sha1-bC4XHbKiV82WgC/UOwGyDV9YcPY=
+
 lodash.isequal@^4.5.0:
   version "4.5.0"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
   integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
+
+lodash.isregexp@^4.0.1:
+  version "4.0.1"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/lodash.isregexp/-/lodash.isregexp-4.0.1.tgz#e13e647b30cd559752a04cd912086faf7da1c30b"
+  integrity sha1-4T5kezDNVZdSoEzZEghvr32hwws=
+
+lodash.isstring@^4.0.1:
+  version "4.0.1"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
+  integrity sha1-1SfftUVuynzJu5XV2ur4i6VKVFE=
 
 lodash.memoize@^4.1.2:
   version "4.1.2"
@@ -12108,7 +12268,7 @@ node-releases@^1.1.61, node-releases@^1.1.75:
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/node-releases/-/node-releases-1.1.75.tgz#6dd8c876b9897a1b8e5a02de26afa79bb54ebbfe"
   integrity sha512-Qe5OUajvqrqDSy6wrWFmMwfJ0jVgwiw4T3KqmbTcZ62qW0gQkheXYhcFM1+lOVcGUoRxcEcfyvFMAnDgaF1VWw==
 
-node-sass@^6.0.1:
+node-sass@6.0.1:
   version "6.0.1"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/node-sass/-/node-sass-6.0.1.tgz#cad1ccd0ce63e35c7181f545d8b986f3a9a887fe"
   integrity sha512-f+Rbqt92Ful9gX0cGtdYwjTrWAaGURgaK5rZCWOgCNyGWusFYHhbqCCBoFBeat+HKETOU02AyTxNhJV0YZf2jQ==
@@ -12343,7 +12503,7 @@ object.pick@^1.3.0:
   dependencies:
     isobject "^3.0.1"
 
-object.values@^1.1.0, object.values@^1.1.4:
+object.values@^1.1.0, object.values@^1.1.1, object.values@^1.1.4:
   version "1.1.4"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/object.values/-/object.values-1.1.4.tgz#0d273762833e816b693a637d30073e7051535b30"
   integrity sha512-TnGo7j4XSnKQoK3MfvkzqKCi0nVe/D9I9IjwTNYdb/fxYHpjrluHVOgw0AF6jrRFGMPHdfuidR09tIDiIvnaSg==
@@ -13750,7 +13910,7 @@ postcss-values-parser@^2.0.0, postcss-values-parser@^2.0.1:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
-postcss@7.0.36, postcss@^7, postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.26, postcss@^7.0.27, postcss@^7.0.31, postcss@^7.0.32, postcss@^7.0.36, postcss@^7.0.5, postcss@^7.0.6, postcss@^7.0.7:
+postcss@7.0.36, postcss@^7, postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.26, postcss@^7.0.27, postcss@^7.0.32, postcss@^7.0.36, postcss@^7.0.5, postcss@^7.0.6, postcss@^7.0.7:
   version "7.0.36"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/postcss/-/postcss-7.0.36.tgz#056f8cffa939662a8f5905950c07d5285644dfcb"
   integrity sha512-BebJSIUMwJHRH0HAQoxN4u1CN86glsrwsW0q7T+/m44eXOUAxSNdHRkNZPYz5vVUbg17hFgOQDE7fZk7li3pZw==
@@ -13787,6 +13947,11 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
   integrity sha1-gV7R9uvGWSb4ZbMQwHE7yzMVzks=
+
+prettier@2.2.1:
+  version "2.2.1"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
+  integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
 
 prettier@^2.2.1:
   version "2.3.2"
@@ -14231,7 +14396,7 @@ react-docgen@^5.0.0:
     node-dir "^0.1.10"
     strip-indent "^3.0.0"
 
-react-dom@^17.0.2:
+react-dom@17.0.2:
   version "17.0.2"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
   integrity sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==
@@ -14328,19 +14493,14 @@ react-refresh@^0.8.3:
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
-react-router-dom@^5.3.0:
+react-router-dom@5.3.0:
   version "6.0.0-beta.2"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/react-router-dom/-/react-router-dom-6.0.0-beta.2.tgz#f001f862e94787853363dd845d70340ab55c8744"
   integrity sha512-ZOauHu+clEYCRsW77F21/q6Ou5zmJvL6FvKsbmvO+J+4e7OXglh0VJy8yph8xoz20Ak5UYDExubE6n5+2QP1pw==
   dependencies:
     react-router "6.0.0-beta.2"
 
-react-router@6.0.0-beta.2:
-  version "6.0.0-beta.2"
-  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/react-router/-/react-router-6.0.0-beta.2.tgz#7c804e4d1f86ebfd397ed8b1e05a63d24bf3313f"
-  integrity sha512-oyVEfpVT9VbClWaZNNShfprq8HA5rSLfo/ZsXFT08/6mldM6onHzqr6Lc1ybBYEB7/c+rr1VOA99as7hEoAoXw==
-
-react-router@^5.2.1:
+react-router@5.2.1:
   version "5.2.1"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/react-router/-/react-router-5.2.1.tgz#4d2e4e9d5ae9425091845b8dbc6d9d276239774d"
   integrity sha512-lIboRiOtDLFdg1VTemMwud9vRVuOCZmUIT/7lUoZiSpPODiiH1UQlfXy+vPLC/7IWdFYnhRwAyNqA/+I7wnvKQ==
@@ -14355,6 +14515,11 @@ react-router@^5.2.1:
     react-is "^16.6.0"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
+
+react-router@6.0.0-beta.2:
+  version "6.0.0-beta.2"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/react-router/-/react-router-6.0.0-beta.2.tgz#7c804e4d1f86ebfd397ed8b1e05a63d24bf3313f"
+  integrity sha512-oyVEfpVT9VbClWaZNNShfprq8HA5rSLfo/ZsXFT08/6mldM6onHzqr6Lc1ybBYEB7/c+rr1VOA99as7hEoAoXw==
 
 react-scripts@4.0.3:
   version "4.0.3"
@@ -14452,7 +14617,7 @@ react-textarea-autosize@^8.3.0:
     use-composed-ref "^1.0.0"
     use-latest "^1.0.0"
 
-react@^17.0.2:
+react@17.0.2:
   version "17.0.2"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
   integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
@@ -14665,7 +14830,7 @@ regexp.prototype.flags@^1.2.0, regexp.prototype.flags@^1.3.1:
     call-bind "^1.0.2"
     define-properties "^1.1.3"
 
-regexpp@^3.1.0:
+regexpp@^3.0.0, regexpp@^3.1.0:
   version "3.2.0"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/regexpp/-/regexpp-3.2.0.tgz#0425a2768d8f23bad70ca4b90461fa2f1213e1b2"
   integrity sha512-pq2bWo9mVD43nbts2wGv17XLiNLya+GklZ8kaDLV2Z08gDCsGpnKn9BFMepvWuHCbyVvY7J5o5+BVvoQbmlJLg==
@@ -16181,39 +16346,41 @@ stylelint-config-airbnb@0.0.0:
     ava "0.23.0"
     editorconfig-tools "^0.1.1"
 
-stylelint-order@^4.0.0:
-  version "4.1.0"
-  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/stylelint-order/-/stylelint-order-4.1.0.tgz#692d05b7d0c235ac66fcf5ea1d9e5f08a76747f6"
-  integrity sha512-sVTikaDvMqg2aJjh4r48jsdfmqLT+nqB1MOsaBnvM3OwLx4S+WXcsxsgk5w18h/OZoxZCxuyXMh61iBHcj9Qiw==
+stylelint-order@4.0.0:
+  version "4.0.0"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/stylelint-order/-/stylelint-order-4.0.0.tgz#2a945c2198caac3ff44687d7c8582c81d044b556"
+  integrity sha512-bXV0v+jfB0+JKsqIn3mLglg1Dj2QCYkFHNfL1c+rVMEmruZmW5LUqT/ARBERfBm8SFtCuXpEdatidw/3IkcoiA==
   dependencies:
     lodash "^4.17.15"
-    postcss "^7.0.31"
+    postcss "^7.0.26"
     postcss-sorting "^5.0.1"
 
-stylelint-scss@^3.13.0:
-  version "3.20.1"
-  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/stylelint-scss/-/stylelint-scss-3.20.1.tgz#88f175d9cfe1c81a72858bd0d3550cf61530e212"
-  integrity sha512-OTd55O1TTAC5nGKkVmUDLpz53LlK39R3MImv1CfuvsK7/qugktqiZAeQLuuC4UBhzxCnsc7fp9u/gfRZwFAIkA==
+stylelint-scss@3.13.0:
+  version "3.13.0"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/stylelint-scss/-/stylelint-scss-3.13.0.tgz#875c76e61d95333c4f0ae737a310be6f1d27d780"
+  integrity sha512-SaLnvQyndaPcsgVJsMh6zJ1uKVzkRZJx+Wg/stzoB1mTBdEmGketbHrGbMQNymzH/0mJ06zDSpeCDvNxqIJE5A==
   dependencies:
-    lodash "^4.17.15"
+    lodash.isboolean "^3.0.3"
+    lodash.isregexp "^4.0.1"
+    lodash.isstring "^4.0.1"
     postcss-media-query-parser "^0.2.3"
     postcss-resolve-nested-selector "^0.1.1"
     postcss-selector-parser "^6.0.2"
-    postcss-value-parser "^4.1.0"
+    postcss-value-parser "^4.0.2"
 
-stylelint-webpack-plugin@^1.1.1:
-  version "1.2.3"
-  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/stylelint-webpack-plugin/-/stylelint-webpack-plugin-1.2.3.tgz#c1785dbb5a9e7ea2777726c6851c1e4ac6362ad8"
-  integrity sha512-XEevZZzlI6k3e0Amp7AtpZ/elgaOdPPwLFY9InNoajw4KNRcZTkK61ZsZdHvIyK32Ej9L9u4fwfXG2QGKW0imA==
+stylelint-webpack-plugin@1.1.1:
+  version "1.1.1"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/stylelint-webpack-plugin/-/stylelint-webpack-plugin-1.1.1.tgz#788fb7462f1e84d8a1c33ba7c7af96f02e3cd8ef"
+  integrity sha512-1yBV1Bhfsl5Sdl1xJUUYveA21bUAqP4nEwtCmtv9x4AsR5SxMaBnYWS31vVr4OqmYn0qKB8hn9lmQqeXv5FOJA==
   dependencies:
     arrify "^2.0.1"
     micromatch "^4.0.2"
     schema-utils "^2.6.1"
 
-stylelint@^12.0.0:
-  version "12.0.1"
-  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/stylelint/-/stylelint-12.0.1.tgz#5b1f3bf7333320acce322b49852c8b85e94ce7e4"
-  integrity sha512-1mn39pqZiC/e8KUPoRMc1WMM83Upb2ILaSGxkCvKxALHutEOs2txcPQocJiXdO4Zx4FY4prGqjlkwrbthAxqig==
+stylelint@12.0.0:
+  version "12.0.0"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/stylelint/-/stylelint-12.0.0.tgz#2e8613675f7be11769ce474f45137fdf7751380a"
+  integrity sha512-TwqtATrFOT07SPlUGyHN7tVhWqxwitn5BlAvyBQy/ekA+Nwu4mLU9L1dvGQPNxHUBLowjvkSW18QzHHR6/FVVQ==
   dependencies:
     autoprefixer "^9.7.1"
     balanced-match "^1.0.0"
@@ -16376,7 +16543,7 @@ table@^5.4.6:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-table@^6.0.9:
+table@^6.0.4, table@^6.0.9:
   version "6.7.1"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/table/-/table-6.7.1.tgz#ee05592b7143831a8c94f3cee6aae4c1ccef33e2"
   integrity sha512-ZGum47Yi6KOOFDE8m223td53ath2enHcYLgOCjGr5ngu8bdIARQk6mN/wRMv4yMRcHnCSnHbCEha4sobQx5yWg==
@@ -16740,7 +16907,7 @@ ts-pnp@1.2.0, ts-pnp@^1.1.6:
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/ts-pnp/-/ts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
   integrity sha512-csd+vJOb/gkzvcCHgTGSChYpy5f1/XKNsmvBGO4JXS+z1v2HobugDz4s1IeFXM3wZB44uczs+eazB5Q/ccdhQw==
 
-tsconfig-paths@^3.11.0:
+tsconfig-paths@^3.11.0, tsconfig-paths@^3.9.0:
   version "3.11.0"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/tsconfig-paths/-/tsconfig-paths-3.11.0.tgz#954c1fe973da6339c78e06b03ce2e48810b65f36"
   integrity sha512-7ecdYDnIdmv639mmDwslG6KQg1Z9STTz1j7Gcz0xa+nshh/gKDAHcPxRbWOsA3SPp0tXP2leTcY9Kw+NAkfZzA==
@@ -16863,10 +17030,10 @@ typedarray@^0.0.6:
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^4.4.4:
-  version "4.4.2"
-  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/typescript/-/typescript-4.4.2.tgz#6d618640d430e3569a1dfb44f7d7e600ced3ee86"
-  integrity sha512-gzP+t5W4hdy4c+68bfcv0t400HVJMMd2+H9B7gae1nQlBzCqvrXX+6GL/b3GAgyTH966pzrZ70/fRjwAtZksSQ==
+typescript@4.3.0:
+  version "4.2.4"
+  resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
+  integrity sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==
 
 uglify-js@^3.1.4:
   version "3.14.1"
@@ -17468,7 +17635,7 @@ web-namespaces@^1.0.0:
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/web-namespaces/-/web-namespaces-1.1.4.tgz#bc98a3de60dadd7faefc403d1076d529f5e030ec"
   integrity sha512-wYxSGajtmoP4WxfejAPIr4l0fVh+jeMXZb08wNc0tMg6xsfZXj3cECqIK0G7ZAqUq0PP8WlMDtaOGVBTAWztNw==
 
-web-vitals@^1.1.2:
+web-vitals@1.1.2:
   version "1.1.2"
   resolved "https://nexus.unitedtraders.team/nexus/repository/npm-all/web-vitals/-/web-vitals-1.1.2.tgz#06535308168986096239aa84716e68b4c6ae6d1c"
   integrity sha512-PFMKIY+bRSXlMxVAQ+m2aw9c/ioUYfDgrYot0YUa+/xa0sakubWhSDyxAKwzymvXVdF4CZI71g06W+mqhzu6ig==

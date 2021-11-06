@@ -89,7 +89,7 @@
   line-height: 16px;
   font-weight: normal;
   font-style: normal;
-  letter-spacing: -.078px;
+  letter-spacing: -0.078px;
   color: $error-color;
 
   @media (min-width: 835px) {
@@ -110,7 +110,7 @@
     font-weight: normal;
     font-style: normal;
     color: $input-label-color;
-    transition: top .5s;
+    transition: top 0.5s;
   }
 }
 
