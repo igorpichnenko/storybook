@@ -1,13 +1,11 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { linkTo } from '@storybook/addon-links';
+import { Story, Meta } from "@storybook/react";
 
-import { MemoryRouter } from 'react-router';
-import { CardAuth } from './index';
-import { CardAuthProps } from './CardAuth.types';
+import { MemoryRouter } from "react-router";
+import { CardAuth } from "./index";
+import { CardAuthProps } from "./CardAuth.types";
 
 export default {
-  title: 'CardAuth',
+  title: "CardAuth",
   component: CardAuth,
   decorators: [
     (Story) => (
@@ -18,12 +16,7 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<CardAuthProps> = (args) => (
-  <CardAuth
-    handleClickAuth={() => linkTo('SuccessCard')()}
-    {...args}
-  />
-);
+const Template: Story<CardAuthProps> = (args) => <CardAuth {...args} />;
 
 export const Default = Template.bind({}) as Story<CardAuthProps>;
 Default.args = {};

@@ -1,8 +1,7 @@
-import React from 'react';
+import React from "react";
 
 export type LinkProps = {
-  to: string
-  children: string
-  isActive: boolean
-
+  to: string;
+  children: string;
+  isActive: boolean;
 } & React.HTMLProps<HTMLButtonElement>;

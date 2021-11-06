@@ -1,12 +1,11 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { Story, Meta } from "@storybook/react";
 
-import { MemoryRouter } from 'react-router';
-import { CardNav } from './index';
-import { CardNavProps } from './CardNav.types';
+import { MemoryRouter } from "react-router";
+import { CardNav } from "./index";
+import { CardNavProps } from "./CardNav.types";
 
 export default {
-  title: 'CardNav',
+  title: "CardNav",
   component: CardNav,
   decorators: [
     (Story) => (
