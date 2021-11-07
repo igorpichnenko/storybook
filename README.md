@@ -1,6 +1,6 @@
 # Storybook - Тэстовое задание
 
-
+### login``` Alex ```password ```123456```
 
 ## [Просмотр работы](https://storybook-ifrtd15za-storytest.vercel.app/)
 
