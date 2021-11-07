@@ -5,6 +5,7 @@ import styles from './SuccessCard.module.scss';
 import { CardNav } from '../CardNav';
 import { Button } from '../Button';
 import { Redirect } from 'react-router';
+import { Spinner } from '../Spinner';
 
 const SuccessCard: React.FC<SuccessCardProps> = ({
   className,
@@ -40,7 +41,9 @@ const SuccessCard: React.FC<SuccessCardProps> = ({
           </div>
         </div>
       ) : (
-        <div>загрузка...</div>
+        <div className={styles.spinner}>
+          <Spinner isLoading={isLoading} />
+        </div>
       )}
     </section>
   );

@@ -15,7 +15,6 @@ export const Home = observer(() => {
   const isAuth = store.isAuth;
   const error = store.error;
   const isLoading = store.isLoading;
-  console.log(isLoading);
 
   useEffect(() => {
     if (isAuth) history.push('success');

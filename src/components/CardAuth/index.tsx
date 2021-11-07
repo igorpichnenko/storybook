@@ -7,6 +7,7 @@ import { Input } from '../Input';
 import { Button } from '../Button';
 import { Alert } from '../Alert';
 import { Form } from '../Form';
+import { Spinner } from '../Spinner';
 
 const CardAuth: React.FC<CardAuthProps> = ({
   className,
@@ -31,6 +32,7 @@ const CardAuth: React.FC<CardAuthProps> = ({
     e.preventDefault();
     login({ username, password });
   };
+
   return (
     <Form
       onSubmit={handleSubmitFrom}
@@ -82,7 +84,7 @@ const CardAuth: React.FC<CardAuthProps> = ({
 
           <div className={styles.buttonAuth}>
             {isLoading ? (
-              <div>Загрузка...</div>
+              <Spinner isLoading={isLoading} />
             ) : (
               <Button type="submit" variant="primary">
                 Войти
