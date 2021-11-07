@@ -25,7 +25,7 @@ export class AuthStore {
     this.loading = loading;
   }
 
-  async login({ username, password }: LoginRequest) {
+  public async login({ username, password }: LoginRequest) {
     try {
       this.setLoading(true);
       const resp = await fetch(`${API_URL}/users/auth/`, {
@@ -54,7 +54,7 @@ export class AuthStore {
     }
   }
 
-  async getUserName(id?: string) {
+  private async getUserName(id?: string) {
     if (id) {
       try {
         const resp = await fetch(`${API_URL}/users/${id}/`, {
@@ -76,23 +76,23 @@ export class AuthStore {
     }
   }
 
-  setErrors(errors: Error | undefined) {
+  public setErrors(errors: Error | undefined) {
     this.errors = errors;
   }
 
-  setIsAuth(isAuth: boolean) {
+  public setIsAuth(isAuth: boolean) {
     this.auth = isAuth;
   }
 
-  setId(id: string) {
+  private setId(id: string) {
     this.id = id;
   }
 
-  setName(name: string) {
+  private setName(name: string) {
     this.name = name;
   }
 
-  async getName() {
+  private async getName() {
     await this.getUserName(this.id);
   }
 
