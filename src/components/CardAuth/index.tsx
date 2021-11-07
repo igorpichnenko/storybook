@@ -43,12 +43,16 @@ const CardAuth: React.FC<CardAuthProps> = ({
         <div className={styles.cardFooter}>
           {error ? (
             <div className={styles.error}>
-              <Alert children="Ой-ёй" image="alert" alt="alert" />{' '}
+              <Alert
+                children={error['error_message']}
+                image="alert"
+                alt="alert"
+              />
             </div>
           ) : null}
           <div className={styles.inputEmail}>
             <Input
-              error={error ? 'Ой-ёй' : ''}
+              error={error && error['error_message']}
               name="email"
               type="text"
               variant="primary"
@@ -63,7 +67,7 @@ const CardAuth: React.FC<CardAuthProps> = ({
           </div>
           <div className={styles.passInput}>
             <Input
-              error={error ? 'Ой-ёй' : ''}
+              error={error && error['error_message']}
               type="password"
               variant="secondary"
               placeholder="Пароль"
@@ -77,9 +81,13 @@ const CardAuth: React.FC<CardAuthProps> = ({
           </div>
 
           <div className={styles.buttonAuth}>
-            <Button type="submit" variant="primary">
-              Войти
-            </Button>
+            {isLoading ? (
+              <div>Загрузка...</div>
+            ) : (
+              <Button type="submit" variant="primary">
+                Войти
+              </Button>
+            )}
           </div>
           <div className={styles.buttonPass}>
             <Button type="submit" variant="dim">

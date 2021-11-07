@@ -1,5 +1,5 @@
 import React from 'react';
-import { LoginRequest } from '../../stores/Auth/AuthStore';
+import { Error, LoginRequest } from '../../stores/Auth/AuthStore';
 
 export type CardAuthProps = {
   handleClickAuth?: (name: string) => void;

@@ -13,6 +13,9 @@ export const Home = observer(() => {
   const store = useContext(storesContext);
   const userName = store.userName;
   const isAuth = store.isAuth;
+  const error = store.error;
+  const isLoading = store.isLoading;
+  console.log(isLoading);
 
   useEffect(() => {
     if (isAuth) history.push('success');
@@ -24,11 +27,12 @@ export const Home = observer(() => {
   const logout = () => {
     history.push('/');
     store.setIsAuth(false);
+    store.setErrors(undefined);
   };
   return (
     <Switch>
       <Route exact path="/">
-        <CardAuth login={login} />
+        <CardAuth isLoading={isLoading} error={error} login={login} />
       </Route>
       <Route exact path="/success">
         <SuccessCard

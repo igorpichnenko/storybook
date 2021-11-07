@@ -12,17 +12,22 @@ export interface Error {
 }
 
 export class AuthStore {
-  id?: string;
-  name?: string;
-  isLoading = false;
-  auth = false;
+  private id?: string;
+  private name?: string;
+  private loading = false;
+  private auth = false;
+  private errors?: Error;
 
   constructor() {
     makeAutoObservable(this);
   }
+  setLoading(loading: boolean) {
+    this.loading = loading;
+  }
 
   async login({ username, password }: LoginRequest) {
     try {
+      this.setLoading(true);
       const resp = await fetch(`${API_URL}/users/auth/`, {
         method: 'POST',
         body: `login=${username}&password=${password}`,
@@ -31,11 +36,21 @@ export class AuthStore {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
       });
-      this.setIsAuth(true);
+
       const response = await resp.json();
-      this.setId(response.user.id);
+
+      if (response['error_code'] === 0) {
+        this.setIsAuth(true);
+        this.setId(response.user.id);
+      }
+      this.setLoading(false);
+
+      if (response['error_code'] === 1) {
+        this.setErrors(response);
+      }
     } catch (e) {
       console.log(e);
+      this.setLoading(false);
     }
   }
 
@@ -52,10 +67,17 @@ export class AuthStore {
 
         const response = await resp.json();
         this.setName(response.user.name);
+        if (response['error_code'] === 1) {
+          this.setErrors(response);
+        }
       } catch (e) {
         console.log(e);
       }
     }
+  }
+
+  setErrors(errors: Error | undefined) {
+    this.errors = errors;
   }
 
   setIsAuth(isAuth: boolean) {
@@ -85,5 +107,13 @@ export class AuthStore {
 
   get isAuth() {
     return this.auth;
+  }
+
+  get error() {
+    return this.errors;
+  }
+
+  get isLoading() {
+    return this.loading;
   }
 }
