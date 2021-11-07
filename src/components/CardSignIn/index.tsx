@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { CardAuthProps } from './CardAuth.types';
-import styles from './CardAuth.module.scss';
+import { CardSignInProps } from './CardSignIn.types';
+import styles from './CardSignIn.module.scss';
 
 import { CardNav } from '../CardNav';
 import { Input } from '../Input';
@@ -10,7 +10,7 @@ import { Alert } from '../Alert';
 import { Form } from '../Form';
 import { Spinner } from '../Spinner';
 
-const CardAuth: React.FC<CardAuthProps> = ({
+export const CardSignIn: React.FC<CardSignInProps> = ({
   className,
   handleClickAuth,
   error,
@@ -32,7 +32,6 @@ const CardAuth: React.FC<CardAuthProps> = ({
 
   const handleSubmitFrom = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    login({ username, password });
   };
 
   return (
@@ -93,7 +92,7 @@ const CardAuth: React.FC<CardAuthProps> = ({
               <Spinner isLoading={isLoading} styles="border-color: blue" />
             ) : (
               <Button type="submit" variant="primary">
-                Войти
+                Зарегистрироваться
               </Button>
             )}
           </div>
@@ -107,5 +106,3 @@ const CardAuth: React.FC<CardAuthProps> = ({
     </Form>
   );
 };
-
-export { CardAuth };

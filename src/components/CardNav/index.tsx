@@ -8,9 +8,12 @@ import { LinkComponent } from '../Link';
 export const CardNav: React.FC<CardNavProps> = ({
   className,
   isLink,
+  isSimpleHeader,
+  loginActiveTab,
+  signInActiveTab,
   ...rest
 }) => {
-  const noLinkHeader = isLink ? ' ' : styles.simple;
+  const noLinkHeader = isSimpleHeader ? ' ' : styles.simple;
   return (
     <section
       className={`${styles.cardNav}  ${className} ${noLinkHeader}`}
@@ -19,14 +22,15 @@ export const CardNav: React.FC<CardNavProps> = ({
       <div className={styles.logotype}>
         <Logo image="logo" alt="logo" />
       </div>
-      {isLink ? (
+      {isSimpleHeader ? (
         <div className={styles.links}>
-          <LinkComponent to="/auth" children="Вход" isActive />
+          <LinkComponent to="/" children="Вход" isActive={loginActiveTab} />
           <div className={styles.reg}>
             <LinkComponent
-              to="/registration"
+              to="/signIn"
               children="Регистрация"
-              isActive={false}
+              isActive={signInActiveTab}
+              activeTab={signInActiveTab}
             />
           </div>
         </div>

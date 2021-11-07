@@ -1,37 +1,66 @@
+import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Route, Switch } from 'react-router-dom';
 import { CardAuth } from '../../components/CardAuth';
 import { SuccessCard } from '../../components/SuccessCard';
-import { Redirect, useHistory } from 'react-router';
+import { Redirect, useHistory, useLocation } from 'react-router';
 import { useContext } from 'react';
 import { storesContext } from '../../stores';
 import { LoginRequest } from '../../stores/Auth/AuthStore';
-import { useEffect } from 'react';
+import { CardSignIn } from '../../components/CardSignIn';
 
 export const Home = observer(() => {
-  const history = useHistory();
+  const { push } = useHistory();
+  const { pathname } = useLocation();
+
   const store = useContext(storesContext);
   const userName = store.userName;
   const isAuth = store.isAuth;
   const error = store.error;
   const isLoading = store.isLoading;
 
+  const [signInActiveTab, setSignInActiveTab] = useState(false);
+  const [loginActiveTab, setLoginActiveTab] = useState(true);
+
   useEffect(() => {
-    if (isAuth) history.push('success');
-  }, [isAuth]);
+    if (isAuth) push('success');
+    if (pathname === '/') {
+      setSignInActiveTab(false);
+      setLoginActiveTab(true);
+    }
+    if (pathname === '/signIn') {
+      setSignInActiveTab(true);
+      setLoginActiveTab(false);
+    }
+  }, [isAuth, pathname]);
 
   const login = ({ username, password }: LoginRequest) => {
     store.login({ username, password });
   };
   const logout = () => {
-    history.push('/');
+    push('/');
     store.setIsAuth(false);
     store.setErrors(undefined);
   };
   return (
     <Switch>
       <Route exact path="/">
-        <CardAuth isLoading={isLoading} error={error} login={login} />
+        <CardAuth
+          loginActiveTab={loginActiveTab}
+          signInActiveTab={signInActiveTab}
+          isLoading={isLoading}
+          error={error}
+          login={login}
+        />
+      </Route>
+      <Route exact path="/signIn">
+        <CardSignIn
+          loginActiveTab={loginActiveTab}
+          signInActiveTab={signInActiveTab}
+          isLoading={isLoading}
+          error={error}
+          login={login}
+        />
       </Route>
       <Route exact path="/success">
         {isAuth ? (

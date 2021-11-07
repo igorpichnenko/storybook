@@ -17,9 +17,9 @@ const Template: Story<CardNavProps> = (args) => (
 
 export const Default = Template.bind({}) as Story<CardNavProps>;
 Default.args = {
-  isLink: true,
+  isSimpleHeader: true,
 };
 export const noLink = Template.bind({}) as Story<CardNavProps>;
 noLink.args = {
-  isLink: false,
+  isSimpleHeader: false,
 };

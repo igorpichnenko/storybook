@@ -21,7 +21,7 @@ const SuccessCard: React.FC<SuccessCardProps> = ({
       {userName && !isLoading ? (
         <div className={styles.wrapper}>
           <div className={styles.nav}>
-            <CardNav isLink={false} />
+            <CardNav isSimpleHeader={false} />
           </div>
           <div className={styles.items}>
             <img className={styles.icon} src={`/${image}.svg`} alt={alt} />
