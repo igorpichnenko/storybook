@@ -59,7 +59,6 @@ export const Home = observer(() => {
           signInActiveTab={signInActiveTab}
           isLoading={isLoading}
           error={error}
-          login={login}
         />
       </Route>
       <Route exact path="/success">

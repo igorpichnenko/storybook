@@ -14,7 +14,7 @@ export const CardSignIn: React.FC<CardSignInProps> = ({
   className,
   handleClickAuth,
   error,
-  login,
+  signIn,
   isLoading,
   loginActiveTab,
   signInActiveTab,

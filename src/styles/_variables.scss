@@ -27,6 +27,10 @@ $link-color-secondary: #828282;
 $line-color: #191919;
 $shadow-color: rgba(0, 0, 0, 0.08);
 $card-shadow: 0 0 2px $shadow-color, 0 2px 24px $shadow-color;
+$main-font-size: 14px;
+$table-font-size: 13px;
+$font-family-primary: 'Montserrat', arial, sans-serif;
+$font-family-secondary: 'Roboto', arial, sans-serif;
 
 $lower-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.08);
 // media size
@@ -54,4 +58,13 @@ $sm-phone-width: 320px;
   border-top: unset;
   border-left: unset;
   border-right: unset;
+}
+
+// function
+
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) / stripUnit($main-font-size)}rem;
 }
