@@ -2,9 +2,9 @@ import React from 'react';
 
 import { SuccessCardProps } from './SuccessCard.types';
 import styles from './SuccessCard.module.scss';
+
 import { CardNav } from '../CardNav';
 import { Button } from '../Button';
-import { Redirect } from 'react-router';
 import { Spinner } from '../Spinner';
 
 const SuccessCard: React.FC<SuccessCardProps> = ({
@@ -17,10 +17,6 @@ const SuccessCard: React.FC<SuccessCardProps> = ({
   logout,
   ...rest
 }) => {
-  if (!isAuth) {
-    return <Redirect to="/" />;
-  }
-
   return (
     <section className={`${styles.successCard}  ${className}`} {...rest}>
       {userName ? (
@@ -42,7 +38,7 @@ const SuccessCard: React.FC<SuccessCardProps> = ({
         </div>
       ) : (
         <div className={styles.spinner}>
-          <Spinner isLoading={isLoading} />
+          <Spinner styles="border-color: teal" isLoading={isLoading} />
         </div>
       )}
     </section>

@@ -34,13 +34,16 @@ export const Home = observer(() => {
         <CardAuth isLoading={isLoading} error={error} login={login} />
       </Route>
       <Route exact path="/success">
-        <SuccessCard
-          userName={userName}
-          logout={logout}
-          image="smail"
-          alt="smail"
-          isAuth={isAuth}
-        />
+        {isAuth ? (
+          <SuccessCard
+            userName={userName}
+            logout={logout}
+            image="smail"
+            alt="smail"
+          />
+        ) : (
+          <Redirect to="/" />
+        )}
       </Route>
       <Redirect to="/" />
     </Switch>

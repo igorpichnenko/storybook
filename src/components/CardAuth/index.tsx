@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { CardAuthProps } from './CardAuth.types';
 import styles from './CardAuth.module.scss';
+
 import { CardNav } from '../CardNav';
 import { Input } from '../Input';
 import { Button } from '../Button';
@@ -84,7 +85,7 @@ const CardAuth: React.FC<CardAuthProps> = ({
 
           <div className={styles.buttonAuth}>
             {isLoading ? (
-              <Spinner isLoading={isLoading} />
+              <Spinner isLoading={isLoading} styles="border-color: blue" />
             ) : (
               <Button type="submit" variant="primary">
                 Войти

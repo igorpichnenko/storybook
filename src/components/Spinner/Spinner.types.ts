@@ -2,5 +2,5 @@ import React from 'react';
 
 export type SpinnerProps = {
   isLoading?: boolean;
-  style?: string;
+  styles?: string;
 } & React.HTMLProps<HTMLElement>;
