@@ -13,13 +13,12 @@ const SuccessCard: React.FC<SuccessCardProps> = ({
   alt = 'my image',
   userName,
   isLoading,
-  isAuth,
   logout,
   ...rest
 }) => {
   return (
     <section className={`${styles.successCard}  ${className}`} {...rest}>
-      {userName ? (
+      {userName && !isLoading ? (
         <div className={styles.wrapper}>
           <div className={styles.nav}>
             <CardNav isLink={false} />

@@ -16,4 +16,6 @@ const Template: Story<CardAuthProps> = (args) => (
 );
 
 export const Default = Template.bind({}) as Story<CardAuthProps>;
-Default.args = {};
+Default.args = {
+  login: () => console.log('login'),
+};

@@ -14,7 +14,6 @@ const CardAuth: React.FC<CardAuthProps> = ({
   className,
   handleClickAuth,
   error,
-  isAuth,
   login,
   isLoading,
   ...rest

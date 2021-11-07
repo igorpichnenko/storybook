@@ -14,4 +14,7 @@ export const Success = Template.bind({}) as Story<SuccessCardProps>;
 Success.args = {
   image: 'smail',
   alt: 'smail',
+  isLoading: false,
+  userName: 'Alex',
+  logout: () => console.log('logout'),
 };

@@ -5,6 +5,5 @@ export type SuccessCardProps = {
   alt: string;
   userName?: string;
   isLoading?: boolean;
-  isAuth?: boolean;
   logout: () => void;
 } & React.HTMLProps<HTMLDivElement>;

@@ -12,5 +12,5 @@ const Template: Story<SpinnerProps> = (args) => <Spinner {...args} />;
 
 export const Email = Template.bind({}) as Story<SpinnerProps>;
 Email.args = {
-  isLoading: false,
+  isLoading: true,
 };
