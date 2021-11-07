@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router';
 
 import { CardAuthProps } from './CardAuth.types';
 import styles from './CardAuth.module.scss';
@@ -7,18 +6,17 @@ import { CardNav } from '../CardNav';
 import { Input } from '../Input';
 import { Button } from '../Button';
 import { Alert } from '../Alert';
-import { useStores } from '../../stores';
+import { Form } from '../Form';
 
-export const CardAuth: React.FC<CardAuthProps> = ({
+const CardAuth: React.FC<CardAuthProps> = ({
   className,
   handleClickAuth,
   error,
+  isAuth,
+  login,
+  isLoading,
   ...rest
 }) => {
-  const { authStore } = useStores();
-  const isAuth = authStore.isAuthenticated;
-  const history = useHistory();
-
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -31,13 +29,10 @@ export const CardAuth: React.FC<CardAuthProps> = ({
 
   const handleSubmitFrom = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    authStore.login({ username, password });
-    if (isAuth) {
-      history.push('success');
-    }
+    login({ username, password });
   };
   return (
-    <form
+    <Form
       onSubmit={handleSubmitFrom}
       className={`${styles.cardAuth}  ${className}`}
       {...rest}
@@ -93,6 +88,8 @@ export const CardAuth: React.FC<CardAuthProps> = ({
           </div>
         </div>
       </div>
-    </form>
+    </Form>
   );
 };
+
+export { CardAuth };

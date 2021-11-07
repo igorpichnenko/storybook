@@ -1,17 +1,6 @@
-import { createContext, useContext } from 'react';
-import { AuthService } from '../services/authService';
+import { createContext } from 'react';
 import { AuthStore } from './Auth/AuthStore';
 
-interface Stores {
-  authStore: AuthStore;
-}
-const authService = new AuthService();
-const authStore = new AuthStore(authService);
+const authService = new AuthStore();
 
-const initStores = (): Stores => ({
-  authStore,
-});
-const stores = initStores();
-export default stores;
-export const storesContext = createContext(stores);
-export const useStores = () => useContext(storesContext);
+export const storesContext = createContext(authService);

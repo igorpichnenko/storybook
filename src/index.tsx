@@ -1,15 +1,13 @@
 import ReactDOM from 'react-dom';
-import { Router } from 'react-router';
-import { createBrowserHistory } from 'history';
+import { BrowserRouter } from 'react-router-dom';
 import { Home } from '../src/pages/Home';
 
 import './styles/styles.scss';
 
-const history = createBrowserHistory();
-
 ReactDOM.render(
-  <Router history={history}>
+  <BrowserRouter>
     <Home />
-  </Router>,
+  </BrowserRouter>,
+
   document.getElementById('root'),
 );

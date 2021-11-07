@@ -1,53 +1,89 @@
 import { makeAutoObservable } from 'mobx';
-import { LoginRequest } from '../../dto/request/login-request.dto';
-import { AuthService } from '../../services/authService';
+import { API_URL } from '../../utils/url';
+
+export interface LoginRequest {
+  readonly username: string;
+  readonly password: string;
+}
+
+export interface Error {
+  error_code: number;
+  error_message: string;
+}
 
 export class AuthStore {
-  private authenticated = false;
-  private name?: string;
-  private loading = false;
+  id?: string;
+  name?: string;
+  isLoading = false;
+  auth = false;
 
-  constructor(private readonly authService: AuthService) {
+  constructor() {
     makeAutoObservable(this);
-    this.authenticated = !!this.getAccessToken();
   }
 
-  async login(loginRequest: LoginRequest) {
+  async login({ username, password }: LoginRequest) {
     try {
-      const tokenPayload = await this.authService.login(loginRequest);
-      localStorage.setItem('MyApp_access_token', tokenPayload.user.id);
-      this.setAuthenticated(true);
-      this.getUserName(tokenPayload.user.id);
-    } catch {
-      this.setAuthenticated(false);
+      const resp = await fetch(`${API_URL}/users/auth/`, {
+        method: 'POST',
+        body: `login=${username}&password=${password}`,
+        headers: {
+          accept: 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      });
+      this.setIsAuth(true);
+      const response = await resp.json();
+      this.setId(response.user.id);
+    } catch (e) {
+      console.log(e);
     }
   }
 
-  public setAuthenticated(authenticated: boolean) {
-    if (!authenticated) {
-      localStorage.removeItem('MyApp_access_token');
+  async getUserName(id?: string) {
+    if (id) {
+      try {
+        const resp = await fetch(`${API_URL}/users/${id}/`, {
+          method: 'GET',
+          headers: {
+            accept: 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+        });
+
+        const response = await resp.json();
+        this.setName(response.user.name);
+      } catch (e) {
+        console.log(e);
+      }
     }
-    this.authenticated = authenticated;
   }
 
-  private setName(name: string) {
+  setIsAuth(isAuth: boolean) {
+    this.auth = isAuth;
+  }
+
+  setId(id: string) {
+    this.id = id;
+  }
+
+  setName(name: string) {
     this.name = name;
   }
-  async getUserName(id: string) {
-    const name = await this.authService.getUserName(id);
 
-    this.setName(name);
+  async getName() {
+    await this.getUserName(this.id);
   }
 
   get userName() {
+    this.getName();
     return this.name;
   }
 
-  getAccessToken() {
-    return localStorage.getItem('MyApp_access_token');
+  get userId() {
+    return this.id;
   }
 
-  get isAuthenticated() {
-    return this.authenticated;
+  get isAuth() {
+    return this.auth;
   }
 }

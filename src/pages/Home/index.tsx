@@ -1,18 +1,45 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { observer } from 'mobx-react';
+import { Route, Switch } from 'react-router-dom';
 import { CardAuth } from '../../components/CardAuth';
 import { SuccessCard } from '../../components/SuccessCard';
+import { Redirect, useHistory } from 'react-router';
+import { useContext } from 'react';
+import { storesContext } from '../../stores';
+import { LoginRequest } from '../../stores/Auth/AuthStore';
+import { useEffect } from 'react';
 
-export function Home() {
+export const Home = observer(() => {
+  const history = useHistory();
+  const store = useContext(storesContext);
+  const userName = store.userName;
+  const isAuth = store.isAuth;
+
+  useEffect(() => {
+    if (isAuth) history.push('success');
+  }, [isAuth]);
+
+  const login = ({ username, password }: LoginRequest) => {
+    store.login({ username, password });
+  };
+  const logout = () => {
+    history.push('/');
+    store.setIsAuth(false);
+  };
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/">
-          <CardAuth />
-        </Route>
-        <Route path="/success">
-          <SuccessCard image="smail" alt="smail" />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      <Route exact path="/">
+        <CardAuth login={login} />
+      </Route>
+      <Route exact path="/success">
+        <SuccessCard
+          userName={userName}
+          logout={logout}
+          image="smail"
+          alt="smail"
+          isAuth={isAuth}
+        />
+      </Route>
+      <Redirect to="/" />
+    </Switch>
   );
-}
+});
