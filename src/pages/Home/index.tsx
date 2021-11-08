@@ -12,9 +12,9 @@ import { CardSignIn } from '../../components/CardSignIn';
 export const Home = observer(() => {
   const { push } = useHistory();
   const { pathname } = useLocation();
-
   const store = useContext(storesContext);
-  const userName = store.userName;
+  const localStorageName = localStorage.getItem('login') || undefined;
+  const userName = store.userName || localStorageName;
   const isAuth = store.isAuth;
   const error = store.error;
   const isLoading = store.isLoading;
@@ -23,6 +23,10 @@ export const Home = observer(() => {
   const [loginActiveTab, setLoginActiveTab] = useState(true);
 
   useEffect(() => {
+    console.log(userName);
+    if (localStorageName) {
+      push('success');
+    }
     if (isAuth) push('success');
     if (pathname === '/') {
       setSignInActiveTab(false);
@@ -38,6 +42,7 @@ export const Home = observer(() => {
     store.login({ username, password });
   };
   const logout = () => {
+    localStorage.removeItem('login');
     push('/');
     store.setIsAuth(false);
     store.setErrors(undefined);
@@ -62,7 +67,7 @@ export const Home = observer(() => {
         />
       </Route>
       <Route exact path="/success">
-        {isAuth ? (
+        {localStorageName ? (
           <SuccessCard
             userName={userName}
             logout={logout}

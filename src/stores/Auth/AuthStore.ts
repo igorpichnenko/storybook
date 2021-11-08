@@ -17,9 +17,13 @@ export class AuthStore {
   private loading = false;
   private auth = false;
   private errors?: Error;
+  private timeSession = 3000;
 
   constructor() {
     makeAutoObservable(this);
+    setTimeout(() => {
+      localStorage.removeItem('login');
+    }, this.timeSession);
   }
 
   public async login({ username, password }: LoginRequest) {
@@ -63,6 +67,8 @@ export class AuthStore {
         });
 
         const response = await resp.json();
+
+        localStorage.setItem('login', response.user.name);
         this.setName(response.user.name);
         if (response['error_code'] === 1) {
           this.setErrors(response);
