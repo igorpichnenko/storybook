@@ -17,7 +17,7 @@ export class AuthStore {
   private loading = false;
   private auth = false;
   private errors?: Error;
-  private timeSession = 3000;
+  private timeSession = 10000;
 
   constructor() {
     makeAutoObservable(this);
