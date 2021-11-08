@@ -2,7 +2,7 @@
 
 ### login`Alex`password `123456`
 
-## [Просмотр работы](https://storybook-lh9carg1g-storytest.vercel.app/)
+## [Просмотр работы](https://storybook-n4c1o1mjn-storytest.vercel.app/)
 
 ## Установка
 
