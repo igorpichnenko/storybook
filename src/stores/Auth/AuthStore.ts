@@ -26,7 +26,6 @@ export class AuthStore {
       if (location.pathname === '/success') {
         location.reload();
       }
-      console.log(location.pathname);
     }, this.timeSession);
   }
 
