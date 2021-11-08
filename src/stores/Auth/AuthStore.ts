@@ -17,16 +17,9 @@ export class AuthStore {
   private loading = false;
   private auth = false;
   private errors?: Error;
-  private timeSession = 10000;
 
   constructor() {
     makeAutoObservable(this);
-    setTimeout(() => {
-      localStorage.removeItem('login');
-      if (location.pathname === '/success') {
-        location.reload();
-      }
-    }, this.timeSession);
   }
 
   public async login({ username, password }: LoginRequest) {

@@ -23,10 +23,8 @@ export const Home = observer(() => {
   const [loginActiveTab, setLoginActiveTab] = useState(true);
 
   useEffect(() => {
-    if (localStorageName) {
-      push('success');
-    }
-    if (isAuth) push('success');
+    if (isAuth || localStorageName) push('success');
+
     if (pathname === '/') {
       setSignInActiveTab(false);
       setLoginActiveTab(true);
@@ -35,7 +33,7 @@ export const Home = observer(() => {
       setSignInActiveTab(true);
       setLoginActiveTab(false);
     }
-  }, [isAuth, pathname]);
+  }, [isAuth, pathname, localStorageName]);
 
   const login = ({ username, password }: LoginRequest) => {
     store.login({ username, password });
@@ -66,7 +64,7 @@ export const Home = observer(() => {
         />
       </Route>
       <Route exact path="/success">
-        {localStorageName ? (
+        {isAuth || localStorageName ? (
           <SuccessCard
             userName={userName}
             logout={logout}
