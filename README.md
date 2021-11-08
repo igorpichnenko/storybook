@@ -3,7 +3,7 @@
 ### login`Alex`password `123456`
 
 ## [Просмотр работы](https://storybook-n4c1o1mjn-storytest.vercel.app/)
-## [Просмотр Storybook](https://igorpichnenko.github.io/storybook/?path=/story/linkprops--auth)
+## [Просмотр Storybook](https://igorpichnenko.github.io/storybook/?path=/story/cardauth--default)
 
 ## Установка
 
