@@ -23,6 +23,10 @@ export class AuthStore {
     makeAutoObservable(this);
     setTimeout(() => {
       localStorage.removeItem('login');
+      if (location.pathname === '/success') {
+        location.reload();
+      }
+      console.log(location.pathname);
     }, this.timeSession);
   }
 

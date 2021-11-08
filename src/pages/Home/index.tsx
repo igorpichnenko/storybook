@@ -23,7 +23,6 @@ export const Home = observer(() => {
   const [loginActiveTab, setLoginActiveTab] = useState(true);
 
   useEffect(() => {
-    console.log(userName);
     if (localStorageName) {
       push('success');
     }
