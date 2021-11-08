@@ -19,7 +19,7 @@ export const Input: React.FC<InputProps> = ({
   ...rest
 }) => {
   const inputErrorColor = error ? styles.inputRed : '';
-  const inputFormErrorColor = formError.username?.message
+  const inputFormErrorColor = formError[name]?.message
     ? styles.inputFormErrors
     : '';
   const reg = register ? register : () => console.log('no validate');
