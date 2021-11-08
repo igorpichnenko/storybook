@@ -18,3 +18,11 @@ Success.args = {
   userName: 'Alex',
   logout: () => console.log('logout'),
 };
+export const Loading = Template.bind({}) as Story<SuccessCardProps>;
+Loading.args = {
+  image: 'smail',
+  alt: 'smail',
+  isLoading: true,
+  userName: 'Alex',
+  logout: () => console.log('logout'),
+};
