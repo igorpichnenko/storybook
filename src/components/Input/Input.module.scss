@@ -89,7 +89,7 @@
   line-height: rem(16);
   font-weight: normal;
   font-style: normal;
-  letter-spacing: -0.078px;
+  letter-spacing: -.078px;
   color: $error-color;
 
   @media (min-width: 835px) {
@@ -110,7 +110,7 @@
     font-weight: normal;
     font-style: normal;
     color: $input-label-color;
-    transition: top 0.5s;
+    transition: top .5s;
   }
 }
 
@@ -124,4 +124,8 @@
   @media (max-width: $table-width) {
     border-color: $error-color;
   }
+}
+
+.inputFormErrors {
+  border-color: $error-color;
 }

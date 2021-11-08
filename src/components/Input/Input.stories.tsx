@@ -12,6 +12,7 @@ const Template: Story<InputProps> = (args) => <Input {...args} />;
 
 export const Email = Template.bind({}) as Story<InputProps>;
 Email.args = {
+  formError: {},
   type: 'email',
   image: 'email',
   variant: 'primary',
@@ -23,6 +24,7 @@ Email.args = {
 };
 export const Password = Template.bind({}) as Story<InputProps>;
 Password.args = {
+  formError: {},
   type: 'password',
   image: 'key',
   variant: 'secondary',
@@ -35,6 +37,7 @@ Password.args = {
 
 export const PasswordError = Template.bind({}) as Story<InputProps>;
 PasswordError.args = {
+  formError: {},
   type: 'password',
   image: 'key',
   variant: 'secondary',

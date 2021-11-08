@@ -11,19 +11,28 @@ export const Input: React.FC<InputProps> = ({
   text,
   htmlFor,
   id,
+  name,
+  register,
+  required,
+  formError,
   alt = 'my image',
   ...rest
 }) => {
-  const inputClass = error ? styles.inputRed : '';
-
+  const inputErrorColor = error ? styles.inputRed : '';
+  const inputFormErrorColor = formError.username?.message
+    ? styles.inputFormErrors
+    : '';
+  const reg = register ? register : () => console.log('no validate');
   return (
     <div className={styles.inputWrap}>
       <div className={styles.items}>
         <div className={styles.form}>
           <input
+            autoComplete="off"
+            {...reg(name, { required })}
             className={`${
               styles.input
-            } ${`${styles[variant]}`} ${className} ${inputClass}`}
+            } ${`${styles[variant]}`}  ${inputErrorColor} ${className}  ${inputFormErrorColor}`}
             id={id}
             {...rest}
           />

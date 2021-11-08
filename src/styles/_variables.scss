@@ -2,37 +2,37 @@ $primary: #2b96f1;
 $primary-hover: #138aef;
 $primary-active: #0f85e9;
 $white: #fff;
-$secondary-background: rgba(0, 0, 0, 0.07);
+$secondary-background: rgba(0, 0, 0, .07);
 $secondary-color: #5e5e5e;
-$secondary-hover: rgba(1, 1, 1, 0.1);
-$secondary-active: rgba(0, 0, 0, 0.12);
+$secondary-hover: rgba(1, 1, 1, .1);
+$secondary-active: rgba(0, 0, 0, .12);
 $dim: #2b96f1;
-$dim-hover: rgba(43, 150, 241, 0.1);
-$dim-active: rgba(43, 150, 241, 0.2);
+$dim-hover: rgba(43, 150, 241, .1);
+$dim-active: rgba(43, 150, 241, .2);
 $dim-table-width: #4ca6fe;
 $button-border-radius: 20px;
 $error-color: #f15b3e;
-$error-background: rgba(242, 107, 81, 0.12);
+$error-background: rgba(242, 107, 81, .12);
 $top-border-radius: 6px 6px 0 0;
 $bottom-border-radius: 0 0 6px 6px;
 $input-border-radius: 6px 6px 6px 6px;
 $input-background: #fafafa;
 $text-color-primary: #191919;
 $input-label-color: #aaa;
-$input-background-primary: rgba(0, 0, 0, 0.1);
+$input-background-primary: rgba(0, 0, 0, .1);
 $border-secondary: 1px solid $input-background-primary;
 $border-primary: 1px solid #198cff;
 $link-color-primary: #198cff;
 $link-color-secondary: #828282;
 $line-color: #191919;
-$shadow-color: rgba(0, 0, 0, 0.08);
+$shadow-color: rgba(0, 0, 0, .08);
 $card-shadow: 0 0 2px $shadow-color, 0 2px 24px $shadow-color;
 $main-font-size: 14px;
 $table-font-size: 13px;
 $font-family-primary: 'Montserrat', arial, sans-serif;
 $font-family-secondary: 'Roboto', arial, sans-serif;
 
-$lower-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+$lower-shadow: inset 0 -1px 0 rgba(0, 0, 0, .08);
 // media size
 $desktop-width: 1440px;
 $md-desktop-width: 1160px;
@@ -65,6 +65,7 @@ $sm-phone-width: 320px;
 @function stripUnit($value) {
   @return $value / ($value * 0 + 1);
 }
+
 @function rem($pxValue) {
   @return #{stripUnit($pxValue) / stripUnit($main-font-size)}rem;
 }

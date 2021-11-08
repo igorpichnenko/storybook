@@ -1,0 +1,63 @@
+@import '../../styles/styles.scss';
+
+.form {
+  margin-top: 25px;
+
+  @include flex-column;
+
+  @media (max-width: $table-width) {
+    margin-top: 181px;
+  }
+
+  @media (max-width: $sm-phone-width) {
+    margin-top: 120px;
+  }
+}
+
+.error {
+  margin-bottom: 15px;
+
+  @media (max-width: $table-width) {
+    display: none;
+  }
+}
+
+.inputEmail {
+  @media (max-width: $table-width) {
+    order: 1;
+  }
+}
+
+.passInput {
+  @media (max-width: $table-width) {
+    margin-top: -15px;
+    order: 3;
+  }
+}
+
+.buttonAuth {
+  margin-top: 26px;
+
+  @media (max-width: $table-width) {
+    margin-top: 326px;
+    order: 4;
+  }
+
+  @media (max-width: $sm-phone-width) {
+    margin-top: 150px;
+  }
+}
+
+.buttonPass {
+  margin-top: 15px;
+
+  @media (max-width: $table-width) {
+    margin-top: 15px;
+    margin-bottom: 0;
+    order: 2;
+  }
+}
+
+.errors {
+  color: $error-color;
+}

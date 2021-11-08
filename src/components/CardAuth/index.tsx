@@ -4,15 +4,11 @@ import { CardAuthProps } from './CardAuth.types';
 import styles from './CardAuth.module.scss';
 
 import { CardNav } from '../CardNav';
-import { Input } from '../Input';
-import { Button } from '../Button';
-import { Alert } from '../Alert';
-import { Form } from '../Form';
-import { Spinner } from '../Spinner';
+import { Form, Inputs } from '../Form';
+import { LoginRequest } from '../../stores/Auth/AuthStore';
 
 const CardAuth: React.FC<CardAuthProps> = ({
   className,
-  handleClickAuth,
   error,
   login,
   isLoading,
@@ -30,17 +26,12 @@ const CardAuth: React.FC<CardAuthProps> = ({
     setPassword(e.target.value);
   };
 
-  const handleSubmitFrom = (e: React.ChangeEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmitFrom = ({ username, password }: LoginRequest) => {
     login({ username, password });
   };
 
   return (
-    <Form
-      onSubmit={handleSubmitFrom}
-      className={`${styles.cardAuth}  ${className}`}
-      {...rest}
-    >
+    <div className={`${styles.cardAuth}  ${className}`} {...rest}>
       <div className={styles.wrapper}>
         <CardNav
           isSimpleHeader
@@ -48,63 +39,16 @@ const CardAuth: React.FC<CardAuthProps> = ({
           signInActiveTab={signInActiveTab}
         />
 
-        <div className={styles.cardFooter}>
-          {error ? (
-            <div className={styles.error}>
-              <Alert
-                children={error['error_message']}
-                image="alert"
-                alt="alert"
-              />
-            </div>
-          ) : null}
-          <div className={styles.inputEmail}>
-            <Input
-              error={error && error['error_message']}
-              name="email"
-              type="text"
-              variant="primary"
-              placeholder="Логин или Почта"
-              image="email"
-              text="Логин или почта"
-              id="email"
-              htmlFor="email"
-              alt="email"
-              onChange={handleOnchangeName}
-            />
-          </div>
-          <div className={styles.passInput}>
-            <Input
-              error={error && error['error_message']}
-              type="password"
-              variant="secondary"
-              placeholder="Пароль"
-              image="key"
-              text="Пароль"
-              id="password"
-              htmlFor="password"
-              alt="password"
-              onChange={handleOnchangePassword}
-            />
-          </div>
-
-          <div className={styles.buttonAuth}>
-            {isLoading ? (
-              <Spinner isLoading={isLoading} styles="border-color: blue" />
-            ) : (
-              <Button type="submit" variant="primary">
-                Войти
-              </Button>
-            )}
-          </div>
-          <div className={styles.buttonPass}>
-            <Button type="submit" variant="dim">
-              Не помню пароль
-            </Button>
-          </div>
-        </div>
+        <Form
+          buttonText="Войти"
+          error={error}
+          isLoading={isLoading}
+          handleOnchangeName={handleOnchangeName}
+          handleOnchangePassword={handleOnchangePassword}
+          onSubmitHandleForm={handleSubmitFrom}
+        ></Form>
       </div>
-    </Form>
+    </div>
   );
 };
 

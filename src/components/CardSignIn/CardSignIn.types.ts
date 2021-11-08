@@ -1,11 +1,11 @@
 import React from 'react';
 import { Error, LoginRequest } from '../../stores/Auth/AuthStore';
+import { Inputs } from '../Form';
 
 export type CardSignInProps = {
-  handleClickAuth?: (name: string) => void;
   error?: Error;
-  signIn?: () => void;
+  onSubmitHandleForm?: (data: Inputs) => void;
   isLoading?: boolean;
   loginActiveTab?: boolean;
   signInActiveTab?: boolean;
-} & React.HTMLProps<HTMLFormElement>;
+} & React.HTMLProps<HTMLDivElement>;

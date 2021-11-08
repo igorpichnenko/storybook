@@ -21,9 +21,6 @@ export class AuthStore {
   constructor() {
     makeAutoObservable(this);
   }
-  setLoading(loading: boolean) {
-    this.loading = loading;
-  }
 
   public async login({ username, password }: LoginRequest) {
     try {
@@ -82,6 +79,9 @@ export class AuthStore {
 
   public setIsAuth(isAuth: boolean) {
     this.auth = isAuth;
+  }
+  private setLoading(loading: boolean) {
+    this.loading = loading;
   }
 
   private setId(id: string) {

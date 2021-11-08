@@ -17,5 +17,5 @@ const Template: Story<CardSignInProps> = (args) => (
 
 export const Default = Template.bind({}) as Story<CardSignInProps>;
 Default.args = {
-  signIn: () => console.log('signIn'),
+  onSubmitHandleForm: () => console.log('signIn'),
 };
