@@ -15,7 +15,11 @@
     ]
   },
   "dependencies": {
+    "@emotion/react": "^11.6.0",
+    "@emotion/styled": "^11.6.0",
     "@hookform/resolvers": "^2.8.3",
+    "@mui/lab": "^5.0.0-alpha.55",
+    "@mui/material": "^5.1.1",
     "@storybook/addon-actions": "6.3.12",
     "@storybook/addon-essentials": "6.3.12",
     "@storybook/addon-links": "6.3.12",

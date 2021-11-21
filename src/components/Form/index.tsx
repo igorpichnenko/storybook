@@ -6,10 +6,10 @@ import { FormProps } from './Form.types';
 import styles from './Form.module.scss';
 import { Alert } from '../Alert';
 import { Input } from '../Input';
-import { Spinner } from '../Spinner';
-import { Button } from '../Button';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { Button } from '@mui/material';
+import { Spinner } from '../Spinner';
 
 export type Inputs = {
   username: string;
@@ -20,8 +20,6 @@ export const Form: React.FC<FormProps> = ({
   children,
   error,
   isLoading,
-  handleOnchangeName,
-  handleOnchangePassword,
   buttonText,
   onSubmitHandleForm,
   ...rest
@@ -71,7 +69,6 @@ export const Form: React.FC<FormProps> = ({
             id="email"
             htmlFor="email"
             alt="email"
-            onChange={handleOnchangeName}
           />
           {errors.username && (
             <span className={styles.errors}>{errors.username?.message}</span>
@@ -92,7 +89,6 @@ export const Form: React.FC<FormProps> = ({
             id="password"
             htmlFor="password"
             alt="password"
-            onChange={handleOnchangePassword}
           />
           {errors.password && (
             <span className={styles.errors}>{errors.password?.message}</span>
@@ -103,13 +99,19 @@ export const Form: React.FC<FormProps> = ({
           {isLoading ? (
             <Spinner isLoading={isLoading} styles="border-color: blue" />
           ) : (
-            <Button type="submit" variant="primary">
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              disableElevation
+              size="large"
+            >
               {buttonText}
             </Button>
           )}
         </div>
         <div className={styles.buttonPass}>
-          <Button type="submit" variant="dim">
+          <Button variant="text" size="large">
             Не помню пароль
           </Button>
         </div>
