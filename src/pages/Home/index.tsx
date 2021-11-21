@@ -143,7 +143,7 @@ export const Home = observer(() => {
                     <img src={smail} alt={'smail'} />
                   </ImgWrapper>
                   {userName ? (
-                    <Typography textAlign="center" component="h4">
+                    <Typography textAlign="center" component="h1">
                       Поздравляем, {`${userName}`}! Вы успешно авторизированны
                     </Typography>
                   ) : (

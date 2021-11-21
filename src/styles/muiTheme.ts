@@ -14,14 +14,15 @@ declare module '@mui/material/styles' {
 export const miuTheme = createTheme({
   palette: {
     primary: {
-      main: '#2b96f1',
-      dark: '#138aef',
-      light: '#0f85e9',
+      main: '#2B96F1',
+      dark: '#0F85E9;',
+      light: '#138AEF',
     },
+
     secondary: {
-      main: 'rgba(1, 1, 1, .1)',
-      light: 'rgba(0, 0, 0, .12)',
-      dark: '#5e5e5e ',
+      main: 'rgba(0, 0, 0, 0.07)',
+      light: ' rgba(1, 1, 1, 0.1)',
+      dark: 'rgba(0, 0, 0, 0.12)',
     },
   },
   breakpoints: {
@@ -74,7 +75,7 @@ export const miuTheme = createTheme({
     },
   },
   typography: {
-    fontSize: 14,
+    fontSize: 15,
     button: {
       fontSize: 15,
       fontWeight: 500,
