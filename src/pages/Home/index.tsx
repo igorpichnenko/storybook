@@ -8,16 +8,25 @@ import smail from './static/smail.svg';
 
 import { Form, Inputs } from '../../components/Form';
 
-import { WrapperCard, Wrapper, BasicTabsWrapper, StyledTabs } from './styles';
+import {
+  WrapperCard,
+  Wrapper,
+  BasicTabsWrapper,
+  StyledTabs,
+  CardContent,
+  ImgWrapper,
+  ButtonWrapper,
+} from './styles';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { Route, Switch } from 'react-router-dom';
 import { Redirect, useHistory, useLocation } from 'react-router';
 import { useContext } from 'react';
 import { storesContext } from '../../stores';
 import { LoginRequest } from '../../stores/Auth/AuthStore';
-import { Button } from '@mui/material';
+import { Button, Typography } from '@mui/material';
+import { Spinner } from '../../components/Spinner';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -99,7 +108,7 @@ export const Home = observer(() => {
   const isLoading = store.isLoading;
 
   useEffect(() => {
-    /*  if (isAuth || localStorageName) push('success'); */
+    if (isAuth || localStorageName) push('success');
   }, [isAuth, localStorageName]);
 
   const login = ({ username, password }: LoginRequest) => {
@@ -128,24 +137,31 @@ export const Home = observer(() => {
             <Wrapper>
               <WrapperCard>
                 <img src={logo} alt={'logo'} />
-                <BasicTabsWrapper>
-                  <Box
-                    sx={{
-                      borderTop: 0.1,
-                      borderColor: 'divider',
-                      width: '100%',
-                    }}
-                  >
+
+                <CardContent>
+                  <ImgWrapper>
                     <img src={smail} alt={'smail'} />
+                  </ImgWrapper>
+                  {userName ? (
+                    <Typography textAlign="center" component="h4">
+                      Поздравляем, {`${userName}`}! Вы успешно авторизированны
+                    </Typography>
+                  ) : (
+                    <Spinner />
+                  )}
+                  <ButtonWrapper>
                     <Button
-                      onChange={() => logout}
+                      onClick={logout}
                       color="secondary"
                       variant="contained"
+                      disableElevation
+                      size="large"
+                      sx={{ color: '#5E5E5E' }}
                     >
                       Выйти
                     </Button>
-                  </Box>
-                </BasicTabsWrapper>
+                  </ButtonWrapper>
+                </CardContent>
               </WrapperCard>
             </Wrapper>
           ) : (

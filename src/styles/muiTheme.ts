@@ -19,9 +19,9 @@ export const miuTheme = createTheme({
       light: '#0f85e9',
     },
     secondary: {
-      main: '#5e5e5e',
-      light: 'rgba(1, 1, 1, .1)',
-      dark: 'rgba(0, 0, 0, .12)',
+      main: 'rgba(1, 1, 1, .1)',
+      light: 'rgba(0, 0, 0, .12)',
+      dark: '#5e5e5e ',
     },
   },
   breakpoints: {

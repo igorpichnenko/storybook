@@ -64,3 +64,31 @@ export const StyledTabs = styled((props: StyledTabsProps) => (
     borderRadius: '10px',
   },
 });
+
+export const CardContent = styled('div')(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  borderTop: 0.1,
+  boxShadow: '0px -1px 0px rgba(0, 0, 0, 0.08)',
+  marginTop: '35.5px',
+  width: '300px',
+  [theme.breakpoints.down('md')]: { width: '100%' },
+}));
+
+export const ImgWrapper = styled('div')(({ theme }) => ({
+  marginTop: '55px',
+  marginBottom: '14px',
+  [theme.breakpoints.down('md')]: { marginTop: '234px' },
+  [theme.breakpoints.down('sm')]: { marginTop: '172px' },
+  [theme.breakpoints.down('xs')]: { marginTop: '80px' },
+}));
+
+export const ButtonWrapper = styled('div')(({ theme }) => ({
+  marginTop: '55px',
+  width: '100%',
+  [theme.breakpoints.down('md')]: { marginTop: '390px' },
+  [theme.breakpoints.down('sm')]: { marginTop: '327px' },
+  [theme.breakpoints.down('xs')]: { marginTop: '120px' },
+}));
