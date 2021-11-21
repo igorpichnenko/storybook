@@ -7,6 +7,7 @@ import logo from './static/logo.svg';
 import smail from './static/smail.svg';
 
 import { Form, Inputs } from '../../components/Form';
+import { Error } from '../../stores/Auth/AuthStore';
 
 import {
   WrapperCard,
@@ -61,11 +62,12 @@ function activeTab(index: number) {
 interface BasicTabsProps {
   onSubmitHandleForm: (data: Inputs) => void;
   isLoading: boolean;
+  error?: Error;
 }
-
 export default function BasicTabs({
   onSubmitHandleForm,
   isLoading,
+  error,
 }: BasicTabsProps) {
   const [value, setValue] = React.useState(0);
 
@@ -83,6 +85,7 @@ export default function BasicTabs({
       </Box>
       <TabPanel value={value} index={0}>
         <Form
+          error={error}
           buttonText="Войти"
           onSubmitHandleForm={onSubmitHandleForm}
           isLoading={isLoading}
@@ -127,7 +130,11 @@ export const Home = observer(() => {
           <Wrapper>
             <WrapperCard>
               <img src={logo} alt={'logo'} />
-              <BasicTabs onSubmitHandleForm={login} isLoading={isLoading} />
+              <BasicTabs
+                onSubmitHandleForm={login}
+                isLoading={isLoading}
+                error={error}
+              />
             </WrapperCard>
           </Wrapper>
         </Route>
